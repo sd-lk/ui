@@ -1,0 +1,16 @@
+{
+  "name": "@sdlk/preset",
+  "version": "0.0.2",
+  "description": "Tailwind preset",
+  "scripts": {
+    "lint": "eslint src --ext js,ts,tsx"
+  },
+  "main": "index.js",
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "@babel/preset-env": "^7.14.7",
+    "@babel/preset-typescript": "^7.14.5",
+    "typescript": "^4.3.4"
+  }
+}
