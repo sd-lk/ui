@@ -26,5 +26,9 @@
   "publishConfig": {
     "access": "public"
   },
-  "gitHead": "de5e483804a9614ecb64faa269c6d3138eb405bf"
+  "workspaces": [
+    "react",
+    "tailwind-preset"
+  ],
+  "gitHead": "0dc2dd45bfb285efbd8fe894a2021dd5f18de481"
 }

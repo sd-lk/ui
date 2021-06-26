@@ -13,6 +13,10 @@
   "publishConfig": {
     "access": "restricted"
   },
+  "workspaces": [
+    "react",
+    "tailwind-preset"
+  ],
   "license": "MIT",
   "private": true
 }
