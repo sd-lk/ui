@@ -22,4 +22,4 @@ link:
 	npx lerna link
 
 publish:
-	npx lerna publish
+	npx lerna publish --no-private
