@@ -1,0 +1,11 @@
+{
+  "extends": "../tsconfig.settings.json",
+  "compilerOptions": {
+    "composite": true,
+    "outDir": "lib",
+    "allowJs": false,
+    "jsx": "preserve"
+  },
+  "exclude": ["node_modules", "**/*.spec.*"],
+  "include": ["src/*.ts", "src/*.tsx"]
+}
