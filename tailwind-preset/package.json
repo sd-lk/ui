@@ -1,9 +1,11 @@
 {
-  "name": "@sdlk/preset",
+  "name": "@sdlk/tailwind-preset",
   "version": "0.0.2",
   "description": "Tailwind preset",
   "scripts": {
-    "lint": "eslint src --ext js,ts,tsx"
+    "build": "tsc -b .",
+    "lint": "eslint src --ext js,ts,tsx",
+    "typecheck": "tsc --emitDeclarationOnly"
   },
   "main": "index.js",
   "license": "MIT",

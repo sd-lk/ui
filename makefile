@@ -1,22 +1,25 @@
 # Build
 build:
-	yarn tsc -b .
+	npx lerna run build
 
 clean:
-	yarn tsc -b . --clean; yarn rimraf **/lib
+	npx tsc -b . --clean; npx rimraf **/lib
 
 # Lerna
 lint:
-	yarn lerna run lint
+	npx lerna run lint --stream
 
 test:
-	yarn lerna run test
+	npx lerna run test --stream
+
+typecheck:
+	npx lerna run typecheck
 
 bootstrap:
-	yarn lerna bootstrap
+	npx lerna bootstrap
 
 link:
-	yarn lerna link
+	npx lerna link
 
 publish:
-	yarn lerna publish
+	npx lerna publish

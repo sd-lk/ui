@@ -3,10 +3,15 @@
   "version": "0.0.2",
   "main": "index.js",
   "scripts": {
+    "build": "tsc -b .",
     "lint": "eslint src --ext js,ts,tsx",
-    "test": "jest"
+    "test": "jest",
+    "typecheck": "tsc --emitDeclarationOnly"
   },
   "license": "MIT",
+  "dependencies": {
+    "@sdlk/tailwind-preset": "0.0.1"
+  },
   "devDependencies": {
     "@babel/preset-env": "^7.14.7",
     "@babel/preset-typescript": "^7.14.5",
