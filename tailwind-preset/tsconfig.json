@@ -2,6 +2,7 @@
   "extends": "../tsconfig.settings.json",
   "compilerOptions": {
     "composite": true,
+    "module": "commonjs",
     "outDir": "lib",
     "rootDir": "src"
   },

@@ -6,6 +6,9 @@ clean:
 	npx tsc -b . --clean; npx rimraf **/lib
 
 # Lerna
+dev:
+	npx lerna run dev --stream
+
 lint:
 	npx lerna run lint --stream
 

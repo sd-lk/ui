@@ -1,9 +1,5 @@
 {
-  "packages": [
-    "tailwind-preset",
-    "react",
-    "storybook"
-  ],
+  "packages": ["tailwind-preset", "react", "react-storybook"],
   "version": "0.0.8",
   "npmClient": "yarn",
   "useWorkspaces": true

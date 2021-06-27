@@ -8,9 +8,9 @@
   "license": "MIT",
   "private": true,
   "workspaces": [
-    "preset",
     "react",
-    "storybook"
+    "react-storybook",
+    "tailwind-preset"
   ],
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^4.28.0",
