@@ -26,7 +26,7 @@ export declare const colors: {
             DEFAULT: string;
             dark: string;
         };
-        note: {
+        info: {
             DEFAULT: string;
             dark: string;
         };
@@ -54,7 +54,7 @@ export declare const colors: {
             DEFAULT: string;
             dark: string;
         };
-        note: {
+        info: {
             DEFAULT: string;
             dark: string;
         };

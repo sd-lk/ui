@@ -2,8 +2,11 @@
 Tailwind based UI library
 
 ## Todo
-- Colors
-- Paper
++ Colors
++ Paper
++ Ink
+- Link
+- Spinner
 - Button
 - Drawer
 - Tabs
@@ -22,7 +25,6 @@ Tailwind based UI library
 - Placeholder
 - Spinner
 - Typography
-- Spinner
 - Form
 - Validator
 - usePositionAttachment

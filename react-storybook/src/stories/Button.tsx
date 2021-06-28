@@ -33,16 +33,11 @@ export const Button = ({
   label,
   ...props
 }: ButtonProps) => {
-  const mode = primary
-    ? 'storybook-button--primary-'
-    : 'storybook-button--secondary-'
   return (
     <button
       type="button"
       className={[
-        'storybook-button-',
-        `storybook-button--${size}- border-0 p-8 bg-paper-primary dark:bg-paper-secondary-dark`,
-        mode,
+        `border-0 px-8 py-4 rounded border-2 ui-paper ui-ink-info`,
       ].join(' ')}
       style={{ backgroundColor }}
       {...props}

@@ -29,7 +29,7 @@ export declare const sdlkPreset: {
                         DEFAULT: string;
                         dark: string;
                     };
-                    note: {
+                    info: {
                         DEFAULT: string;
                         dark: string;
                     };
@@ -57,7 +57,7 @@ export declare const sdlkPreset: {
                         DEFAULT: string;
                         dark: string;
                     };
-                    note: {
+                    info: {
                         DEFAULT: string;
                         dark: string;
                     };
@@ -102,6 +102,12 @@ export declare const sdlkPreset: {
                 15: string;
                 16: string;
             };
+        };
+    };
+    plugins: any[];
+    variants: {
+        extend: {
+            textColor: string[];
         };
     };
 };

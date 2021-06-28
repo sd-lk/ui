@@ -16,14 +16,14 @@ export const parameters = {
       ...themes.dark,
       appBg: sdlkPreset.theme.extend.colors.paper['2'].dark,
       appContentBg: sdlkPreset.theme.extend.colors.paper.dark,
-      barSelectedColor: sdlkPreset.theme.extend.colors.paper.note.dark,
+      barSelectedColor: sdlkPreset.theme.extend.colors.paper.info.dark,
     },
     // Override the default light theme
     light: {
       ...themes.normal,
       appBg: sdlkPreset.theme.extend.colors.paper['2'].DEFAULT,
       appContentBg: sdlkPreset.theme.extend.colors.paper.DEFAULT,
-      barSelectedColor: sdlkPreset.theme.extend.colors.paper.note.DEFAULT,
+      barSelectedColor: sdlkPreset.theme.extend.colors.paper.info.DEFAULT,
     },
     // current: 'light',
     darkClass: 'dark',

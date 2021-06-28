@@ -8,7 +8,7 @@ export const colors = {
     error: { DEFAULT: '#EC4E3D', dark: '#D85243' },
     success: { DEFAULT: '#4FA762', dark: '#458052' },
     warning: { DEFAULT: '#E87C06', dark: '#C6751C' },
-    note: { DEFAULT: '#4C9BE4', dark: '#3B72A5' },
+    info: { DEFAULT: '#4C9BE4', dark: '#3B72A5' },
   },
   ink: {
     DEFAULT: '#414141',
@@ -18,7 +18,7 @@ export const colors = {
     error: { DEFAULT: '#D74030', dark: '#D45D50' },
     success: { DEFAULT: '#3B7D49', dark: '#6D9F78' },
     warning: { DEFAULT: '#E48D2E', dark: '#B98A56' },
-    note: { DEFAULT: '#3784CB', dark: '#5A86AF' },
+    info: { DEFAULT: '#3784CB', dark: '#5A86AF' },
   },
   link: {
     DEFAULT: '#120EED',

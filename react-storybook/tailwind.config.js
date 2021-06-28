@@ -1,5 +1,6 @@
 const { sdlkPreset } = require('@sdlk/tailwind-preset')
-console.log('sdlkPreset: ', sdlkPreset)
+// const paperPlugn = require('./plugins/paper.plugin')
+// const linkPlugn = require('./plugins/link.plugin')
 
 module.exports = {
   purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
@@ -15,5 +16,5 @@ module.exports = {
   variants: {
     extend: {},
   },
-  plugins: [],
+  // plugins: [linkPlugn],
 }

@@ -22,7 +22,7 @@ export const Page = ({
       onCreateAccount={onCreateAccount}
     />
 
-    <section>
+    <section className="ui-link-box ui-ink">
       <h2>Pages in Storybook</h2>
       <p>
         We recommend building UIs with a{' '}
@@ -30,6 +30,7 @@ export const Page = ({
           href="https://componentdriven.org"
           target="_blank"
           rel="noopener noreferrer"
+          className="ui-link"
         >
           <strong>component-driven</strong>
         </a>{' '}
@@ -56,6 +57,7 @@ export const Page = ({
           href="https://storybook.js.org/tutorials/"
           target="_blank"
           rel="noopener noreferrer"
+          className="ui-link"
         >
           Storybook tutorials
         </a>
