@@ -5,7 +5,7 @@ Tailwind based UI library
 + Colors
 + Paper
 + Ink
-- Link
++ Link
 - Spinner
 - Button
 - Drawer

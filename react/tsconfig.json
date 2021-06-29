@@ -5,8 +5,8 @@
     "outDir": "lib",
     "rootDir": "src",
     "allowJs": false,
-    "jsx": "preserve"
+    "jsx": "react-jsx"
   },
   "exclude": ["node_modules", "**/*.spec.*"],
-  "include": ["src/*.ts", "src/*.tsx"]
+  "include": ["src/**/*.ts", "src/**/*.tsx"]
 }

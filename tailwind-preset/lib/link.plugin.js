@@ -8,13 +8,10 @@ exports.linkPlugin = void 0;
 // @ts-ignore
 const plugin_1 = __importDefault(require("tailwindcss/plugin"));
 // @ts-ignore
-exports.linkPlugin = plugin_1.default(function ({ addUtilities }) {
-    addUtilities({
-        'a.ui-link': {
-            '@apply text-link dark:text-link-dark active:text-link-active dark:active:text-link-active-dark hover:text-link-hover dark:hover:text-link-hover-dark visited:text-link-visited dark:visited:text-link-visited-dark': {},
-        },
-        '.ui-link-box a': {
-            '@apply text-link dark:text-link-dark active:text-link-active dark:active:text-link-active-dark hover:text-link-hover dark:hover:text-link-hover-dark visited:text-link-visited dark:visited:text-link-visited-dark': {},
+exports.linkPlugin = plugin_1.default(function ({ addBase }) {
+    addBase({
+        'a.ui-link, .ui-link-box a': {
+            '@apply underline text-link dark:text-link-dark active:text-link-active dark:active:text-link-active-dark hover:text-link-hover dark:hover:text-link-hover-dark visited:text-link-visited dark:visited:text-link-visited-dark': {},
         },
     }, { variants: ['responsive', 'active', 'hover', 'visited', 'dark'] });
 });
