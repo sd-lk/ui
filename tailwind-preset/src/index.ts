@@ -1,3 +1,4 @@
+import { addonPlugin } from './addon.plugin'
 import { colors } from './colors'
 import { buttonPlugin } from './button.plugin'
 import { inkPlugin } from './ink.plugin'
@@ -11,7 +12,14 @@ export const sdlkPreset = {
       colors,
     },
   },
-  plugins: [buttonPlugin, inkPlugin, linkPlugin, paperPlugin, spinnerPlugin],
+  plugins: [
+    addonPlugin,
+    buttonPlugin,
+    inkPlugin,
+    linkPlugin,
+    paperPlugin,
+    spinnerPlugin,
+  ],
   variants: {
     extend: {
       brightness: ['active', 'hover'],
