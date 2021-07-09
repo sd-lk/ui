@@ -8,8 +8,9 @@ Tailwind based UI library
 + Link
 + Spinner
 + Button
-- Addon
-- Badge
++ Addon
++ Badge
++ Palette
 - Divider
 - LinearProgress
 - Tabs
@@ -38,7 +39,6 @@ Tailwind based UI library
 - FloatingArea
 - GlobalCss
 - Modal
-- Palette
 - Popover
 - Provider
 - ScrollBox

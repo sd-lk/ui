@@ -1,6 +1,7 @@
 import { addonPlugin } from './addon.plugin'
-import { colors } from './colors'
+import { badgePlugin } from './badge.plugin'
 import { buttonPlugin } from './button.plugin'
+import { colors } from './colors'
 import { inkPlugin } from './ink.plugin'
 import { linkPlugin } from './link.plugin'
 import { paperPlugin } from './paper.plugin'
@@ -14,6 +15,7 @@ export const sdlkPreset = {
   },
   plugins: [
     addonPlugin,
+    badgePlugin,
     buttonPlugin,
     inkPlugin,
     linkPlugin,

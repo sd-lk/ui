@@ -4,10 +4,15 @@
 import plugin from 'tailwindcss/plugin'
 
 // @ts-ignore
-export const buttonPlugin = plugin(function ({ addBase }) {
+export const buttonPlugin = plugin(function ({ addBase, addComponents }) {
+  addComponents({
+    '.ui-text-button': {
+      '@apply text-sm font-medium leading-6': {},
+    },
+  })
   addBase({
     '.ui-button': {
-      '@apply py-2 px-4 rounded text-sm font-medium leading-6 flex gap-2 items-center justify-center relative filter active:brightness-90 hover:brightness-95 transition duration-150': {},
+      '@apply py-2 px-4 rounded ui-text-button leading-6 flex gap-2 items-center justify-center relative filter active:brightness-90 hover:brightness-95 transition duration-150': {},
     },
     '.ui-button--busy': {
       'pointer-events': 'none',
