@@ -3,11 +3,8 @@ const plugin = require('tailwindcss/plugin')
 module.exports = plugin(function ({ addBase }) {
   addBase(
     {
-      // '.ui-spinner': {
-      //   '@apply rounded-full border-2 w-6 h-6 animate-spinner': {},
-      //   borderColor: 'currentColor !important',
-      //   borderLeftColor: 'transparent !important',
-      //   borderRightColor: 'transparent !important',
+      // '.ui-button': {
+      //   '@apply py-2 px-4 rounded text-sm font-medium leading-6 flex gap-2 items-center justify-center relative filter active:brightness-90 hover:brightness-95 transition duration-150': {},
       // },
     }
     // { variants: ['responsive', 'active', 'hover', 'visited', 'dark'] }

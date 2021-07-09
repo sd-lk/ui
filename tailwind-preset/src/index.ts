@@ -1,7 +1,8 @@
 import { colors } from './colors'
-import { paperPlugin } from './paper.plugin'
+import { buttonPlugin } from './button.plugin'
 import { inkPlugin } from './ink.plugin'
 import { linkPlugin } from './link.plugin'
+import { paperPlugin } from './paper.plugin'
 import { spinnerPlugin } from './spinner.plugin'
 
 export const sdlkPreset = {
@@ -10,9 +11,10 @@ export const sdlkPreset = {
       colors,
     },
   },
-  plugins: [paperPlugin, inkPlugin, linkPlugin, spinnerPlugin],
+  plugins: [buttonPlugin, inkPlugin, linkPlugin, paperPlugin, spinnerPlugin],
   variants: {
     extend: {
+      brightness: ['active', 'hover'],
       textColor: ['visited', 'hover', 'active', 'dark'],
     },
   },

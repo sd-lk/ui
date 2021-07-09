@@ -75,9 +75,6 @@ export declare const colors: {
             dark: string;
         };
     };
-    ring: {
-        DEFAULT: string;
-    };
     divider: {
         DEFAULT: string;
         dark: string;

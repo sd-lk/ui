@@ -78,9 +78,6 @@ export declare const sdlkPreset: {
                         dark: string;
                     };
                 };
-                ring: {
-                    DEFAULT: string;
-                };
                 divider: {
                     DEFAULT: string;
                     dark: string;
@@ -107,6 +104,7 @@ export declare const sdlkPreset: {
     plugins: any[];
     variants: {
         extend: {
+            brightness: string[];
             textColor: string[];
         };
     };

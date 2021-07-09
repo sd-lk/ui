@@ -30,9 +30,6 @@ exports.colors = {
         active: { DEFAULT: '#B92AFD', dark: '#CD63FF' },
         visited: { DEFAULT: '#8B2E9A', dark: '#BD9FC1' },
     },
-    ring: {
-        DEFAULT: '#6A68EB64',
-    },
     divider: {
         DEFAULT: '#29292916',
         dark: '#FFFFFF16',

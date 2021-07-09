@@ -11,7 +11,8 @@ const plugin_1 = __importDefault(require("tailwindcss/plugin"));
 exports.spinnerPlugin = plugin_1.default(({ addBase }) => {
     addBase({
         '.ui-spinner': {
-            '@apply rounded-full border-2 w-6 h-6 animate-spinner ui-ink': {},
+            '@apply rounded-full border-2 w-6 h-6 animate-spinner': {},
+            borderColor: 'currentColor',
             borderLeftColor: 'transparent !important',
             borderRightColor: 'transparent !important',
         },
