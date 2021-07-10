@@ -1,0 +1,31 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
+
+// @ts-ignore
+import plugin from 'tailwindcss/plugin'
+
+// @ts-ignore
+export const linearProgressPlugin = plugin(function ({ addBase }) {
+  addBase({
+    '.ui-linear-progress': {
+      '@apply animate-ui-linear-progress block h-1 relative rounded': {},
+      backgroundSize: '200% 100%',
+      backgroundImage: `linear-gradient(
+          to right,
+          transparent 50%,
+          currentColor 50%,
+          currentColor 60%,
+          transparent 60%,
+          transparent 71.5%,
+          currentColor 71.5%,
+          currentColor 84%,
+          transparent 84%
+        )`,
+    },
+    '.ui-linear-progress::before': {
+      '@apply absolute top-0 left-0 right-0 bottom-0 opacity-20': {},
+      backgroundColor: 'currentColor',
+      borderRadius: 'inherit',
+      content: '""',
+    },
+  })
+})

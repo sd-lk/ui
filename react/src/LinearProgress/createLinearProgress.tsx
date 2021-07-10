@@ -6,29 +6,29 @@ import {
   PolymorphicComponentProps,
 } from '../PolymorphicComponent'
 
-export type BadgeProps = {
-  className?: string
-}
+export type LinearProgressProps = { children?: never }
 
-export type BadgeConfig<
+export type LinearProgressConfig<
   E extends ElementType = typeof defaultElement
-> = PolymorphicComponentProps<E, Partial<BadgeProps>>
+> = PolymorphicComponentProps<E, Partial<LinearProgressProps>>
 
-const defaultElement = 'span'
+const defaultElement = 'div'
 
-export const createBadge = <C extends ElementType = typeof defaultElement>({
+export const createLinearProgress = <
+  C extends ElementType = typeof defaultElement
+>({
   className: configClassName,
   element: configElement,
   ...config
-}: BadgeConfig<C>): PolymorphicComponent<C, BadgeProps> =>
+}: LinearProgressConfig<C>): PolymorphicComponent<C, LinearProgressProps> =>
   forwardRef(
     <E extends ElementType = C>(
       {
         className,
-        children,
+        role = 'progressbar',
         element,
         ...rest
-      }: PolymorphicComponentProps<E, BadgeProps>,
+      }: PolymorphicComponentProps<E, LinearProgressProps>,
       ref: Ref<Element>
     ) => {
       const Tag: ElementType = configElement || element || defaultElement
@@ -37,11 +37,10 @@ export const createBadge = <C extends ElementType = typeof defaultElement>({
         <Tag
           {...config}
           {...rest}
-          className={clsx('ui-badge', configClassName, className)}
+          className={clsx('ui-linear-progress', configClassName, className)}
           ref={ref}
-        >
-          {children}
-        </Tag>
+          role={role}
+        />
       )
     }
-  ) as PolymorphicComponent<C, BadgeProps>
+  ) as PolymorphicComponent<C, LinearProgressProps>

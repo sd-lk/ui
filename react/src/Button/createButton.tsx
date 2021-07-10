@@ -19,9 +19,11 @@ export type ButtonConfig<
 
 const defaultElement = 'button'
 
-export const createButton = <C extends ElementType = typeof defaultElement>(
-  config?: ButtonConfig<C>
-): PolymorphicComponent<C, ButtonProps> =>
+export const createButton = <C extends ElementType = typeof defaultElement>({
+  className: configClassName,
+  element: configElement,
+  ...config
+}: ButtonConfig<C>): PolymorphicComponent<C, ButtonProps> =>
   forwardRef(
     <E extends ElementType = C>(
       {
@@ -34,7 +36,7 @@ export const createButton = <C extends ElementType = typeof defaultElement>(
       }: PolymorphicComponentProps<E, ButtonProps>,
       ref: Ref<Element>
     ) => {
-      const Tag: ElementType = config?.element || element || defaultElement
+      const Tag: ElementType = configElement || element || defaultElement
 
       return (
         <Tag
@@ -44,7 +46,7 @@ export const createButton = <C extends ElementType = typeof defaultElement>(
           className={clsx(
             'ui-button',
             busy && 'ui-button--busy',
-            config?.className,
+            configClassName,
             className
           )}
           ref={ref}

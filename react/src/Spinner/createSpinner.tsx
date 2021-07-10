@@ -6,29 +6,27 @@ import {
   PolymorphicComponentProps,
 } from '../PolymorphicComponent'
 
-export type BadgeProps = {
-  className?: string
-}
+export type SpinnerProps = { children?: never }
 
-export type BadgeConfig<
+export type SpinnerConfig<
   E extends ElementType = typeof defaultElement
-> = PolymorphicComponentProps<E, Partial<BadgeProps>>
+> = PolymorphicComponentProps<E, Partial<SpinnerProps>>
 
 const defaultElement = 'span'
 
-export const createBadge = <C extends ElementType = typeof defaultElement>({
+export const createSpinner = <C extends ElementType = typeof defaultElement>({
   className: configClassName,
   element: configElement,
   ...config
-}: BadgeConfig<C>): PolymorphicComponent<C, BadgeProps> =>
+}: SpinnerConfig<C>): PolymorphicComponent<C, SpinnerProps> =>
   forwardRef(
     <E extends ElementType = C>(
       {
         className,
-        children,
+        role = 'progressbar',
         element,
         ...rest
-      }: PolymorphicComponentProps<E, BadgeProps>,
+      }: PolymorphicComponentProps<E, SpinnerProps>,
       ref: Ref<Element>
     ) => {
       const Tag: ElementType = configElement || element || defaultElement
@@ -37,11 +35,10 @@ export const createBadge = <C extends ElementType = typeof defaultElement>({
         <Tag
           {...config}
           {...rest}
-          className={clsx('ui-badge', configClassName, className)}
+          className={clsx('ui-spinner', configClassName, className)}
           ref={ref}
-        >
-          {children}
-        </Tag>
+          role={role}
+        />
       )
     }
-  ) as PolymorphicComponent<C, BadgeProps>
+  ) as PolymorphicComponent<C, SpinnerProps>

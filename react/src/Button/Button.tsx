@@ -1,3 +1,3 @@
 import { createButton } from './createButton'
 
-export const Button = createButton()
+export const Button = createButton({})
