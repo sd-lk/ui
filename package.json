@@ -9,6 +9,7 @@
   "private": true,
   "workspaces": [
     "react",
+    "react-entypo",
     "react-storybook",
     "tailwind-preset"
   ],

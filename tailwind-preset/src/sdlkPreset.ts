@@ -2,9 +2,11 @@ import { addonPlugin } from './addonPlugin'
 import { badgePlugin } from './badgePlugin'
 import { buttonPlugin } from './buttonPlugin'
 import { colors } from './colors'
+import { entypoPlugin } from './entypoPlugin'
 import { inkPlugin } from './inkPlugin'
 import { linearProgressPlugin } from './linearProgressPlugin'
 import { linkPlugin } from './linkPlugin'
+import { listPlugin } from './listPlugin'
 import { paperPlugin } from './paperPlugin'
 import { spinnerPlugin } from './spinnerPlugin'
 
@@ -52,7 +54,9 @@ export const sdlkPreset = {
     addonPlugin,
     badgePlugin,
     buttonPlugin,
+    entypoPlugin,
     inkPlugin,
+    listPlugin,
     linearProgressPlugin,
     linkPlugin,
     paperPlugin,

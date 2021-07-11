@@ -4,6 +4,7 @@
   "references": [
     { "path": "tailwind-preset" },
     { "path": "react" },
+    { "path": "react-entypo" },
     { "path": "react-storybook" }
   ]
 }

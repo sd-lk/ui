@@ -5,8 +5,6 @@ export default {
   title: 'Example/LinearProgress',
 }
 
-export type LinearProgressProps = { className?: string }
-
 const Template: ComponentStory<typeof LinearProgress> = (props) => (
   <LinearProgress {...props} />
 )

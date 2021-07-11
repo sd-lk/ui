@@ -1,0 +1,12 @@
+{
+  "extends": "../tsconfig.settings.json",
+  "compilerOptions": {
+    "composite": true,
+    "outDir": "lib",
+    "rootDir": "src",
+    "allowJs": false,
+    "jsx": "react-jsx"
+  },
+  "exclude": ["node_modules", "**/*.spec.*"],
+  "include": ["src/**/*.ts", "src/**/*.tsx"]
+}
