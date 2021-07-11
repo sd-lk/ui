@@ -55,7 +55,7 @@ Advanced.args = {
         <span className="ui-list-text">Starred</span>
         <ChevronSmallRight className="ui-list-icon" />
       </li>
-      <hr className="mx-4 my-2" />
+      <hr className="mx-4 my-2 border-dotted border-t-2" />
       <li className="ui-list-group">
         <Archive className="ui-list-icon" />
         <span className="ui-list-text">Archive</span>

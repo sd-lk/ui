@@ -2,6 +2,7 @@ import { addonPlugin } from './addonPlugin'
 import { badgePlugin } from './badgePlugin'
 import { buttonPlugin } from './buttonPlugin'
 import { colors } from './colors'
+import { dividerPlugin } from './dividerPlugin'
 import { entypoPlugin } from './entypoPlugin'
 import { inkPlugin } from './inkPlugin'
 import { linearProgressPlugin } from './linearProgressPlugin'
@@ -54,6 +55,7 @@ export const sdlkPreset = {
     addonPlugin,
     badgePlugin,
     buttonPlugin,
+    dividerPlugin,
     entypoPlugin,
     inkPlugin,
     listPlugin,
