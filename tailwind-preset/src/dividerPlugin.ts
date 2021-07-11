@@ -9,6 +9,7 @@ export const dividerPlugin = plugin(function ({ addBase }) {
     'hr, .ui-divider': {
       borderWidth: '1px 0 0 0',
       borderTopColor: 'currentColor',
+      opacity: 0.32,
     },
   })
 })

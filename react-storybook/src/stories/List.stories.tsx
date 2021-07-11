@@ -1,6 +1,5 @@
 import { ComponentStory } from '@storybook/react'
 import clsx from 'clsx'
-import { List } from '@sdlk/react'
 import {
   Archive,
   ChevronSmallRight,
@@ -10,12 +9,12 @@ import {
 } from '@sdlk/react-entypo'
 
 export default {
-  title: 'Example/List',
+  title: 'Utility/List',
 }
 
 export type LinearProgressProps = { className?: string }
 
-const Template: ComponentStory<typeof List> = (props) => (
+const Template: ComponentStory<'ul'> = (props) => (
   <ul {...props} className={clsx('ui-list', props.className)} />
 )
 
@@ -55,7 +54,7 @@ Advanced.args = {
         <span className="ui-list-text">Starred</span>
         <ChevronSmallRight className="ui-list-icon" />
       </li>
-      <hr className="mx-4 my-2 border-dotted border-t-2" />
+      <hr className="mx-4 my-2 border-dotted border-t-2 opacity-100" />
       <li className="ui-list-group">
         <Archive className="ui-list-icon" />
         <span className="ui-list-text">Archive</span>
