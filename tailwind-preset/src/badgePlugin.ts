@@ -7,7 +7,7 @@ import plugin from 'tailwindcss/plugin'
 export const badgePlugin = plugin(function ({ addBase }) {
   addBase({
     '.ui-badge': {
-      '@apply px-2 rounded-full inline-block ui-text-button': {},
+      '@apply px-2 rounded-full inline-block ui-button-text': {},
     },
   })
 })

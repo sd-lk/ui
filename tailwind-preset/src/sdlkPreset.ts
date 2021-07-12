@@ -10,6 +10,7 @@ import { linkPlugin } from './linkPlugin'
 import { listPlugin } from './listPlugin'
 import { paperPlugin } from './paperPlugin'
 import { spinnerPlugin } from './spinnerPlugin'
+import { switchPlugin } from './switchPlugin'
 
 export const sdlkPreset = {
   theme: {
@@ -63,6 +64,7 @@ export const sdlkPreset = {
     linkPlugin,
     paperPlugin,
     spinnerPlugin,
+    switchPlugin,
   ],
   variants: {
     extend: {

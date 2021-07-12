@@ -19,6 +19,7 @@ export const colors = {
     success: { DEFAULT: '#3B7D49', dark: '#6D9F78' },
     warning: { DEFAULT: '#E48D2E', dark: '#B98A56' },
     info: { DEFAULT: '#3784CB', dark: '#5A86AF' },
+    border: { DEFAULT: '#29292916', dark: '#FFFFFF16' },
   },
   link: {
     DEFAULT: '#120EED',
@@ -26,10 +27,6 @@ export const colors = {
     hover: { DEFAULT: '#5F5CFF', dark: '#ACAAF0' },
     active: { DEFAULT: '#B92AFD', dark: '#CD63FF' },
     visited: { DEFAULT: '#8B2E9A', dark: '#BD9FC1' },
-  },
-  divider: {
-    DEFAULT: '#29292916',
-    dark: '#FFFFFF16',
   },
   1: '#FF640024',
   2: '#FF820015',

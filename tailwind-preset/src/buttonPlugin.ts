@@ -6,13 +6,26 @@ import plugin from 'tailwindcss/plugin'
 // @ts-ignore
 export const buttonPlugin = plugin(function ({ addBase, addComponents }) {
   addComponents({
-    '.ui-text-button': {
+    '.ui-button-text': {
       '@apply text-sm font-medium leading-6': {},
     },
   })
   addBase({
     '.ui-button': {
-      '@apply py-2 px-4 rounded ui-text-button leading-6 flex gap-2 items-center justify-center relative filter active:brightness-90 hover:brightness-95 transition duration-150': {},
+      '@apply py-2 px-4 rounded ui-button-text leading-6 flex gap-2 items-center justify-center relative': {},
+      transition: 'filter',
+      '&:before': {
+        '@apply absolute top-0 left-0 right-0 bottom-0 opacity-0 transition duration-150': {},
+        content: '""',
+        backgroundColor: 'currentColor',
+        borderRadius: 'inherit',
+      },
+      '&:hover::before': {
+        opacity: 0.08,
+      },
+      '&:active::before': {
+        opacity: 0.16,
+      },
     },
     '.ui-button--busy': {
       'pointer-events': 'none',

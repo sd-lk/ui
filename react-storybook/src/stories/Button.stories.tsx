@@ -19,7 +19,7 @@ Default.args = {
       <span>0</span>Button<span>1</span>
     </>
   ),
-  className: 'ui-paper ui-ink',
+  className: 'ui-ink',
 }
 
 export const Primary = Template.bind({})

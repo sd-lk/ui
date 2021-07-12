@@ -27,5 +27,8 @@ export const inkPlugin = plugin(function ({ addUtilities }) {
     '.ui-ink-info': {
       '@apply border-ink-info text-ink-info dark:border-ink-info-dark dark:text-ink-info-dark': {},
     },
+    '.ui-ink-border': {
+      '@apply border-ink-border text-ink-border dark:border-ink-border-dark dark:text-ink-border-dark': {},
+    },
   })
 })
