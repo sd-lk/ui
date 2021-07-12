@@ -1,5 +1,6 @@
 import { addonPlugin } from './addonPlugin'
 import { badgePlugin } from './badgePlugin'
+import { basePlugin } from './basePlugin'
 import { buttonPlugin } from './buttonPlugin'
 import { colors } from './colors'
 import { dividerPlugin } from './dividerPlugin'
@@ -8,6 +9,7 @@ import { inkPlugin } from './inkPlugin'
 import { linearProgressPlugin } from './linearProgressPlugin'
 import { linkPlugin } from './linkPlugin'
 import { listPlugin } from './listPlugin'
+import { menuPlugin } from './menuPlugin'
 import { paperPlugin } from './paperPlugin'
 import { spinnerPlugin } from './spinnerPlugin'
 import { switchPlugin } from './switchPlugin'
@@ -55,6 +57,7 @@ export const sdlkPreset = {
   plugins: [
     addonPlugin,
     badgePlugin,
+    basePlugin,
     buttonPlugin,
     dividerPlugin,
     entypoPlugin,
@@ -62,6 +65,7 @@ export const sdlkPreset = {
     listPlugin,
     linearProgressPlugin,
     linkPlugin,
+    menuPlugin,
     paperPlugin,
     spinnerPlugin,
     switchPlugin,

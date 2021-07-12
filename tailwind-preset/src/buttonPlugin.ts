@@ -26,6 +26,9 @@ export const buttonPlugin = plugin(function ({ addBase, addComponents }) {
       '&:active::before': {
         opacity: 0.16,
       },
+      '&:disabled': {
+        '@apply ui-disabled': {},
+      },
     },
     '.ui-button--busy': {
       'pointer-events': 'none',

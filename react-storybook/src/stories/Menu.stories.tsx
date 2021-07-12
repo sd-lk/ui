@@ -24,11 +24,19 @@ Simple.args = {
   children: (
     <>
       <header className="ui-menu-header py-2 mb-2">Mail</header>
-      <button type="button" className="ui-menu-item">Sent mail</button>
-      <button type="button" className="ui-menu-item">Drafts</button>
-      <button type="button" className="ui-menu-item">Starred</button>
+      <button type="button" className="ui-menu-item">
+        Sent mail
+      </button>
+      <button type="button" className="ui-menu-item">
+        Drafts
+      </button>
+      <button type="button" className="ui-menu-item">
+        Starred
+      </button>
       <hr className="mx-4 my-2" />
-      <button type="button" className="ui-menu-item">Archive</button>
+      <button type="button" className="ui-menu-item">
+        Archive
+      </button>
     </>
   ),
 }
@@ -44,16 +52,16 @@ Advanced.args = {
         <span className="ui-menu-text">Sent mail</span>
         <ChevronSmallRight className="ui-menu-icon" />
       </button>
-      <button type="button" className="ui-menu-group ui-ink">
+      <button type="button" className="ui-menu-group ui-ink" disabled>
         <Mail className="ui-menu-icon" />
         <span className="ui-menu-text">Drafts</span>
         <ChevronSmallRight className="ui-menu-icon" />
       </button>
-      <button type="button" className="ui-menu-group ui-ink">
+      <a href="button" className="ui-menu-group ui-ink">
         <Star className="ui-menu-icon" />
         <span className="ui-menu-text">Starred</span>
         <ChevronSmallRight className="ui-menu-icon" />
-      </button>
+      </a>
       <hr className="mx-4 my-2 border-dotted border-t-2" />
       <button type="button" className="ui-menu-group ui-ink-secondary">
         <Archive className="ui-menu-icon" />
