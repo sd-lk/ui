@@ -2,6 +2,7 @@ import { addonPlugin } from './addonPlugin'
 import { badgePlugin } from './badgePlugin'
 import { basePlugin } from './basePlugin'
 import { buttonPlugin } from './buttonPlugin'
+import { checkboxPlugin } from './checkboxPlugin'
 import { colors } from './colors'
 import { dividerPlugin } from './dividerPlugin'
 import { entypoPlugin } from './entypoPlugin'
@@ -59,6 +60,7 @@ export const sdlkPreset = {
     badgePlugin,
     basePlugin,
     buttonPlugin,
+    checkboxPlugin,
     dividerPlugin,
     entypoPlugin,
     inkPlugin,
