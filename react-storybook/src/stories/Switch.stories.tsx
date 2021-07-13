@@ -1,4 +1,5 @@
 import { ComponentStory } from '@storybook/react'
+import clsx from 'clsx'
 
 export default {
   title: 'Utility/Switch',
@@ -6,6 +7,13 @@ export default {
 
 const Checkbox: ComponentStory<'input'> = (props) => (
   <input type="checkbox" {...props} />
+)
+
+const Radio: ComponentStory<'form'> = ({ className, ...props }) => (
+  <form
+    className={clsx('ui-menu ui-paper-2 ui-ink shadow max-w-sm', className)}
+    {...props}
+  />
 )
 
 export const Default = Checkbox.bind({})
@@ -20,5 +28,43 @@ Small.args = { className: 'ui-switch-small checked:ui-paper-success' }
 export const Big = Checkbox.bind({})
 Big.args = {
   className: 'ui-paper-error ui-switch-big checked:ui-paper-info',
+  defaultChecked: true,
+}
+
+export const MutiallyExclusive = Radio.bind({})
+MutiallyExclusive.args = {
+  children: (
+    <>
+      <header className="ui-list-header">Choose one</header>
+      <label className="ui-menu-group">
+        <span className="ui-menu-text">One</span>
+        <input
+          type="radio"
+          name="option"
+          className="ui-switch checked:ui-paper-success ui-menu-icon"
+          value="1"
+        />
+      </label>
+      <label className="ui-menu-group">
+        <span className="ui-menu-text">Two</span>
+        <input
+          type="radio"
+          name="option"
+          className="ui-switch checked:ui-paper-success ui-menu-icon"
+          value="2"
+        />
+      </label>
+      <label className="ui-menu-group">
+        <span className="ui-menu-text">Three</span>
+        <input
+          type="radio"
+          name="option"
+          className="ui-switch checked:ui-paper-success ui-menu-icon"
+          value="3"
+        />
+      </label>
+    </>
+  ),
+  className: '',
   defaultChecked: true,
 }

@@ -3,6 +3,7 @@ export const colors = {
     DEFAULT: '#FCFCFC',
     dark: '#2A2D35',
     2: { DEFAULT: '#EBEBEB', dark: '#4F5462' },
+    3: { DEFAULT: '#D0D0D0', dark: '#767C8B' },
     primary: { DEFAULT: '#FADC4F', dark: '#E2C438' },
     secondary: { DEFAULT: '#524FFA', dark: '#5755CD' },
     error: { DEFAULT: '#EC4E3D', dark: '#D85243' },

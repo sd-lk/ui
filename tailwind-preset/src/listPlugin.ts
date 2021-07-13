@@ -10,10 +10,10 @@ export const listPlugin = plugin(function ({ addBase }) {
       '@apply px-0 py-2 m-0': {},
     },
     '.ui-list-header': {
-      '@apply text-sm opacity-60 px-4': {},
+      '@apply text-sm opacity-60 px-4 py-2 mb-2 block': {},
     },
     '.ui-list-item': {
-      '@apply px-4 py-2 m-0': {},
+      '@apply px-4 py-2 m-0 block': {},
     },
     '.ui-list-group': {
       '@apply flex items-center py-2 m-0': {},

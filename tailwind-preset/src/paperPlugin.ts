@@ -13,6 +13,9 @@ export const paperPlugin = plugin(({ addUtilities }) => {
       '.ui-paper-2': {
         '@apply bg-paper-2 dark:bg-paper-2-dark': {},
       },
+      '.ui-paper-3': {
+        '@apply bg-paper-3 dark:bg-paper-3-dark': {},
+      },
       '.ui-paper-primary': {
         '@apply bg-paper-primary dark:bg-paper-primary-dark': {},
       },

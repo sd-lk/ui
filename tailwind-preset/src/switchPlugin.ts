@@ -7,11 +7,11 @@ import plugin from 'tailwindcss/plugin'
 export const switchPlugin = plugin(function ({ addBase }) {
   addBase({
     '.ui-switch': {
-      '@apply appearance-none relative transition duration-300 rounded-full cursor-pointer ui-paper-2': {},
+      '@apply appearance-none relative transition duration-300 rounded-full cursor-pointer ui-paper-3': {},
       height: '1.5rem',
       width: '2.25rem',
       '&::before': {
-        '@apply ui-paper shadow absolute block transition-transform duration-300': {},
+        '@apply bg-paper shadow absolute block transition-transform duration-300': {},
         content: '""',
         height: 'calc(1.5rem - 2px)',
         width: 'calc(1.5rem - 2px)',
