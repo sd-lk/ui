@@ -1,14 +1,12 @@
 import { ComponentStory } from '@storybook/react'
 
 export default {
-  title: 'Utility/Divider',
+  title: 'CSS/Divider',
 }
 
 export type LinearProgressProps = { className?: string }
 
-const Template: ComponentStory<'hr'> = (props) => (
-  <hr {...props} />
-)
+const Template: ComponentStory<'hr'> = (props) => <hr {...props} />
 
 export const Simple = Template.bind({})
 Simple.args = {

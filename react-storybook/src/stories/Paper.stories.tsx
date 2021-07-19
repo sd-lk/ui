@@ -1,7 +1,7 @@
 import { ComponentStory } from '@storybook/react'
 
 export default {
-  title: 'Utility/Paper',
+  title: 'CSS/Paper',
 }
 
 const Template: ComponentStory<() => JSX.Element> = (args) => (

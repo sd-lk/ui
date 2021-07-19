@@ -2,7 +2,7 @@ import { ComponentStory } from '@storybook/react'
 import { LinearProgress } from '@sdlk/react'
 
 export default {
-  title: 'Example/LinearProgress',
+  title: 'React/LinearProgress',
 }
 
 const Template: ComponentStory<typeof LinearProgress> = (props) => (

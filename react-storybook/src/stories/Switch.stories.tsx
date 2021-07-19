@@ -2,7 +2,7 @@ import { ComponentStory } from '@storybook/react'
 import clsx from 'clsx'
 
 export default {
-  title: 'Utility/Switch',
+  title: 'CSS/Switch',
 }
 
 const Checkbox: ComponentStory<'input'> = (props) => (

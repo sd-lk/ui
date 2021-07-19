@@ -2,7 +2,7 @@ import { ComponentStory } from '@storybook/react'
 import clsx from 'clsx'
 
 export default {
-  title: 'Utility/Badge',
+  title: 'CSS/Badge',
 }
 
 const Template: ComponentStory<'span'> = ({ className, ...props }) => (

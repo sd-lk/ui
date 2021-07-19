@@ -9,7 +9,7 @@ import {
 } from '@sdlk/react-entypo'
 
 export default {
-  title: 'Utility/List',
+  title: 'CSS/List',
 }
 
 export type LinearProgressProps = { className?: string }

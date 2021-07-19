@@ -20,9 +20,9 @@ Tailwind based UI library
 + MenuTitle
 + MenuButton
 + Switch
-- Chekbox
-- Radio
-- Input
++ Chekbox
++ Radio
++ Input
 - InputGroup
 - Select
 - ToolTip

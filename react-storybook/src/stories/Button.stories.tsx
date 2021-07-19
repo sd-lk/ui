@@ -3,7 +3,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react'
 import { Button } from '@sdlk/react'
 
 export default {
-  title: 'Example/Button',
+  title: 'React/Button',
   component: Button,
   argTypes: {
     busy: { control: 'boolean' },
@@ -55,7 +55,7 @@ Outlined.args = {
 export const Round = Template.bind({})
 Round.args = {
   children: 'R',
-  className: 'ui-paper-2 w-12 h-12 rounded-full px-0 py-0',
+  className: 'ui-paper-2 ui-ink w-12 h-12 rounded-full px-0 py-0',
 }
 
 export const Busy = Template.bind({})

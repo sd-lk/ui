@@ -7,11 +7,13 @@ import { colors } from './colors'
 import { dividerPlugin } from './dividerPlugin'
 import { entypoPlugin } from './entypoPlugin'
 import { inkPlugin } from './inkPlugin'
+import { inputPlugin } from './inputPlugin'
 import { linearProgressPlugin } from './linearProgressPlugin'
 import { linkPlugin } from './linkPlugin'
 import { listPlugin } from './listPlugin'
 import { menuPlugin } from './menuPlugin'
 import { paperPlugin } from './paperPlugin'
+import { radioButtonPlugin } from './radioButtonPlugin'
 import { spinnerPlugin } from './spinnerPlugin'
 import { switchPlugin } from './switchPlugin'
 
@@ -64,11 +66,13 @@ export const sdlkPreset = {
     dividerPlugin,
     entypoPlugin,
     inkPlugin,
+    inputPlugin,
     listPlugin,
     linearProgressPlugin,
     linkPlugin,
     menuPlugin,
     paperPlugin,
+    radioButtonPlugin,
     spinnerPlugin,
     switchPlugin,
   ],

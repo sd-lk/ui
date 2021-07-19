@@ -1,7 +1,7 @@
 import { ComponentStory } from '@storybook/react'
 
 export default {
-  title: 'Utility/Ink',
+  title: 'CSS/Ink',
 }
 
 const Template: ComponentStory<() => JSX.Element> = (args) => (

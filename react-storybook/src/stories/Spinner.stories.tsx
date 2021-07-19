@@ -2,7 +2,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react'
 import { Spinner } from '@sdlk/react'
 
 export default {
-  title: 'Example/Spinner',
+  title: 'React/Spinner',
   component: Spinner,
   argTypes: {
     role: { control: 'text', defaultValue: 'propgress', description: 'sddsd' },

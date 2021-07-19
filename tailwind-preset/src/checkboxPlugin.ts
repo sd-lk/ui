@@ -11,7 +11,6 @@ export const checkboxPlugin = plugin(function ({ addBase }) {
       '&::before': {
         '@apply absolute left-0.5 top-0.5 right-0.5 bottom-0.5 rounded-sm transform scale-0 transition duration-100': {},
         backgroundColor: 'currentColor',
-        borderColor: 'currentColor',
         content: '""',
       },
       '&:checked::before': {
