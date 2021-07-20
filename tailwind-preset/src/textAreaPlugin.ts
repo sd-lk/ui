@@ -7,9 +7,9 @@ import plugin from 'tailwindcss/plugin'
 export const textAreaPlugin = plugin(function ({ addBase }) {
   addBase({
     '.ui-textarea': {
-      '@apply relative flex flex-col-reverse': {},
+      '@apply relative flex flex-col-reverse text-ink dark:text-ink-dark': {},
       '& textarea': {
-        '@apply block box-border appearance-none outline-none rounded bg-paper-2 dark:bg-paper-2-dark text-ink dark:text-ink-dark w-full px-4 py-2': {},
+        '@apply block box-border appearance-none outline-none rounded bg-paper-2 dark:bg-paper-2-dark w-full px-4 py-2': {},
         '-webkit-tap-highlight-color': 'transparent',
         '&:invalid ~ .ui-textarea__label .ui-textarea__label--error-bullet': {
           '@apply inline ui-ink-error': {},

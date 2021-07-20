@@ -21,6 +21,7 @@ export type TextAreaProps = {
   error?: ReactNode
   fancy?: boolean
   labelClassName?: string
+  wrapperClassName?: string
 }
 
 type Props = TextAreaProps & BaseProps
@@ -33,6 +34,8 @@ type TextAreaFactory = (
 
 export const createTextArea: TextAreaFactory = ({
   className: configClassName,
+  labelClassName: configLabelClassName,
+  wrapperClassName: configWrapperClassName,
   ...config
 }) =>
   forwardRef(
@@ -48,6 +51,7 @@ export const createTextArea: TextAreaFactory = ({
         placeholder,
         style,
         value,
+        wrapperClassName,
         ...rest
       } = { ...config, ...props }
       const defaultRef = useRef<HTMLTextAreaElement>(null)
@@ -86,7 +90,9 @@ export const createTextArea: TextAreaFactory = ({
           className={clsx(
             'ui-textarea',
             isFilled && 'ui-textarea--filled',
-            fancy && 'ui-textarea--fancy'
+            fancy && 'ui-textarea--fancy',
+            configWrapperClassName,
+            wrapperClassName
           )}
           style={style}
         >
@@ -99,7 +105,13 @@ export const createTextArea: TextAreaFactory = ({
             value={value}
           />
           {caption && (
-            <span className={clsx('ui-textarea__label', labelClassName)}>
+            <span
+              className={clsx(
+                'ui-textarea__label',
+                configLabelClassName,
+                labelClassName
+              )}
+            >
               {caption}
               <span className="ui-textarea__label--error-bullet">{error}</span>
             </span>

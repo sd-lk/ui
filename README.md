@@ -24,6 +24,8 @@ Tailwind based UI library
 + Radio
 + Input
 + TextArea
+- Backdrop
+- NativeSelect
 - InputGroup
 - Select
 - ToolTip
@@ -35,7 +37,6 @@ Tailwind based UI library
 - usePositionAttachment
 - Entypo
 - Svg
-- NativeSelect
 - Card
 - ArrowKeys
 - Cache
