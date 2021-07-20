@@ -59,7 +59,7 @@ export const inputPlugin = plugin(function ({ addBase }) {
             opacity: 0.4,
           },
         },
-        '& .input__label--error-bullet': {
+        '& ui-input__label--error-bullet': {
           '@apply hidden ml-1': {},
         },
         '& .ui-input__label': {
@@ -73,7 +73,7 @@ export const inputPlugin = plugin(function ({ addBase }) {
             transform: 'translateY(-56%)',
           },
         },
-        '& :invalid ~ .ui-input__label .input__label--error-bullet': {
+        '& :invalid ~ .ui-input__label .ui-input__label--error-bullet': {
           '@apply inline ui-ink-error': {},
         },
         '& .ui-input__menu': {

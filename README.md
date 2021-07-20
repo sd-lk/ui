@@ -23,6 +23,7 @@ Tailwind based UI library
 + Chekbox
 + Radio
 + Input
++ TextArea
 - InputGroup
 - Select
 - ToolTip

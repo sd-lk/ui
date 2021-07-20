@@ -16,6 +16,7 @@ import { paperPlugin } from './paperPlugin'
 import { radioButtonPlugin } from './radioButtonPlugin'
 import { spinnerPlugin } from './spinnerPlugin'
 import { switchPlugin } from './switchPlugin'
+import { textAreaPlugin } from './textAreaPlugin'
 
 export const sdlkPreset = {
   theme: {
@@ -75,6 +76,7 @@ export const sdlkPreset = {
     radioButtonPlugin,
     spinnerPlugin,
     switchPlugin,
+    textAreaPlugin,
   ],
   variants: {
     extend: {

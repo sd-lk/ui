@@ -114,7 +114,7 @@ export const createInput: InputFactory = ({
             {caption && (
               <span className="ui-input__label">
                 {caption}
-                <span className="input__label--error-bullet">{error}</span>
+                <span className="ui-input__label--error-bullet">{error}</span>
               </span>
             )}
           </span>

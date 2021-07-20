@@ -1,28 +1,25 @@
 import { ComponentStory } from '@storybook/react'
-import { Key } from '@sdlk/react-entypo'
-import { Input, PasswordInput } from '@sdlk/react'
+import { TextArea } from '@sdlk/react'
 
 export default {
-  title: 'React/Input',
+  title: 'React/TextArea',
 }
 
-const InputTemplate: ComponentStory<typeof Input> = (props) => (
-  <Input {...props} />
-)
-
-const PasswordTemplate: ComponentStory<typeof PasswordInput> = (props) => (
-  <PasswordInput {...props} />
+const InputTemplate: ComponentStory<typeof TextArea> = (props) => (
+  <TextArea {...props} />
 )
 
 export const Default = InputTemplate.bind({})
-Default.args = { caption: 'Caption' }
+Default.args = { caption: 'Caption', rows: 4, required: true }
+
+export const Autoheight = InputTemplate.bind({})
+Autoheight.args = { caption: 'Caption', rows: 1, autoHeight: true }
 
 export const Fancy = InputTemplate.bind({})
-Fancy.args = { caption: 'Fancy', fancy: true, required: true }
-
-export const Password = PasswordTemplate.bind({})
-Password.args = {
-  before: <Key className="ui-menu-icon" />,
-  caption: 'Password',
-  className: 'focus-within:ring-4 ring-paper-primary!important',
+Fancy.args = {
+  caption: 'Fancy',
+  fancy: true,
+  rows: 1,
+  autoHeight: true,
+  required: true,
 }
