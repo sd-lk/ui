@@ -13,6 +13,9 @@ export const inputPlugin = plugin(function ({ addBase }) {
           '@apply flex flex-1 items-center min-w-0 overflow-hidden px-4 relative self-stretch': {},
           borderRadius: 'inherit',
         },
+        '&.ui-input--disabled': {
+          '@apply ui-disabled': {},
+        },
         '&.ui-input--fancy': {
           '@apply rounded-b-none': {},
           backgroundColor: 'transparent',

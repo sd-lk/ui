@@ -64,3 +64,10 @@ Busy.args = {
   children: 'Busy button',
   className: 'ui-paper-2 ui-ink',
 }
+
+export const Disabled = Template.bind({})
+Disabled.args = {
+  children: 'Disabled button',
+  className: 'ui-paper-2 ui-ink',
+  disabled: true,
+}

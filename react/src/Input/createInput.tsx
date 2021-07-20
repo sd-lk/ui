@@ -48,6 +48,7 @@ export const createInput: InputFactory = ({
         caption,
         className,
         defaultValue,
+        disabled,
         error = '•',
         fancy,
         onBlur,
@@ -86,11 +87,12 @@ export const createInput: InputFactory = ({
         <label
           className={clsx(
             'ui-input',
-            isFilled && 'ui-input--filled',
-            children && 'ui-input--menu',
             after && 'ui-input--after',
             before && 'ui-input--before',
+            children && 'ui-input--menu',
+            disabled && 'ui-input--disabled',
             fancy && 'ui-input--fancy',
+            isFilled && 'ui-input--filled',
             configClassName,
             className
           )}
@@ -101,6 +103,7 @@ export const createInput: InputFactory = ({
             <input
               {...rest}
               defaultValue={defaultValue}
+              disabled={disabled}
               onBlur={handleBlur}
               onKeyDown={handleKeyDown}
               placeholder={placeholder}

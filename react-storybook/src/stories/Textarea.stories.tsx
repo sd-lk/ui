@@ -20,14 +20,6 @@ Default.args = { caption: 'Caption' }
 export const Fancy = InputTemplate.bind({})
 Fancy.args = { caption: 'Fancy', fancy: true, required: true }
 
-export const Disabled = InputTemplate.bind({})
-Disabled.args = {
-  before: <Key className="ui-menu-icon" />,
-  caption: 'Disabled',
-  className: 'focus-within:ring-4 ring-paper-primary!important',
-  disabled: true,
-}
-
 export const Password = PasswordTemplate.bind({})
 Password.args = {
   before: <Key className="ui-menu-icon" />,
