@@ -9,7 +9,7 @@ import {
 import clsx from 'clsx'
 import { getRefCurrent } from '@sdlk/react'
 
-type BaseProps = Omit<ComponentProps<'textarea'>, 'children'>
+type BaseProps = ComponentProps<'div'>
 
 export type TextAreaProps = {
   autoHeight?: boolean
@@ -66,33 +66,10 @@ export const TextArea = forwardRef<HTMLTextAreaElement, Props>(
       }
     }, [autoHeight, ref, state])
 
-    const isFilled =
-      typeof (value || defaultValue || placeholder) !== 'undefined' || !!state
-
     return (
-      <label
-        className={clsx(
-          'ui-textarea',
-          isFilled && 'ui-textarea--filled',
-          fancy && 'ui-textarea--fancy'
-        )}
-        style={style}
-      >
-        <textarea
-          {...rest}
-          className={className}
-          defaultValue={defaultValue}
-          placeholder={placeholder}
-          ref={ref}
-          value={value}
-        />
-        {caption && (
-          <span className={clsx('ui-textarea__label', labelClassName)}>
-            {caption}
-            <span className="ui-textarea__label--error-bullet">{error}</span>
-          </span>
-        )}
-      </label>
+      <div className={clsx('ui-backdrop')} style={style}>
+        {children}
+      </div>
     )
   }
 )

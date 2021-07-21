@@ -19,6 +19,7 @@ export const createLinearProgress = <
 >({
   className: configClassName,
   element: configElement,
+  style: configStyle,
   ...config
 }: LinearProgressConfig<C>): PolymorphicComponent<C, LinearProgressProps> =>
   forwardRef(
@@ -27,6 +28,7 @@ export const createLinearProgress = <
         className,
         role = 'progressbar',
         element,
+        style,
         ...rest
       }: PolymorphicComponentProps<E, LinearProgressProps>,
       ref: Ref<Element>
@@ -40,6 +42,7 @@ export const createLinearProgress = <
           className={clsx('ui-linear-progress', configClassName, className)}
           ref={ref}
           role={role}
+          style={{ ...configStyle, ...style }}
         />
       )
     }

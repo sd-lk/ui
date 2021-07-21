@@ -37,6 +37,7 @@ type InputFactory = (
 
 export const createInput: InputFactory = ({
   className: configClassName,
+  style: configStyle,
   ...config
 }) =>
   forwardRef(
@@ -96,7 +97,7 @@ export const createInput: InputFactory = ({
             configClassName,
             className
           )}
-          style={style}
+          style={{ ...configStyle, ...style }}
         >
           {before}
           <span className="ui-input__wrapper">

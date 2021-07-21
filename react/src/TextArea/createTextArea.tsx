@@ -13,7 +13,7 @@ import clsx from 'clsx'
 
 import { getRefCurrent } from '../helpers'
 
-type BaseProps = ComponentProps<'textarea'>
+type BaseProps = Omit<ComponentProps<'textarea'>, 'children'>
 
 export type TextAreaProps = {
   autoHeight?: boolean
@@ -35,6 +35,7 @@ type TextAreaFactory = (
 export const createTextArea: TextAreaFactory = ({
   className: configClassName,
   labelClassName: configLabelClassName,
+  style: configStyle,
   wrapperClassName: configWrapperClassName,
   ...config
 }) =>
@@ -94,7 +95,6 @@ export const createTextArea: TextAreaFactory = ({
             configWrapperClassName,
             wrapperClassName
           )}
-          style={style}
         >
           <textarea
             {...rest}
@@ -102,6 +102,7 @@ export const createTextArea: TextAreaFactory = ({
             defaultValue={defaultValue}
             placeholder={placeholder}
             ref={ref}
+            style={{ ...configStyle, ...style }}
             value={value}
           />
           {caption && (

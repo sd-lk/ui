@@ -17,6 +17,7 @@ const defaultElement = 'span'
 export const createSpinner = <C extends ElementType = typeof defaultElement>({
   className: configClassName,
   element: configElement,
+  style: configStyle,
   ...config
 }: SpinnerConfig<C>): PolymorphicComponent<C, SpinnerProps> =>
   forwardRef(
@@ -25,6 +26,7 @@ export const createSpinner = <C extends ElementType = typeof defaultElement>({
         className,
         role = 'progressbar',
         element,
+        style,
         ...rest
       }: PolymorphicComponentProps<E, SpinnerProps>,
       ref: Ref<Element>
@@ -38,6 +40,7 @@ export const createSpinner = <C extends ElementType = typeof defaultElement>({
           className={clsx('ui-spinner', configClassName, className)}
           ref={ref}
           role={role}
+          style={{ ...configStyle, ...style }}
         />
       )
     }

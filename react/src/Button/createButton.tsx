@@ -22,6 +22,7 @@ const defaultElement = 'button'
 export const createButton = <C extends ElementType = typeof defaultElement>({
   className: configClassName,
   element: configElement,
+  style: configStyle,
   ...config
 }: ButtonConfig<C>): PolymorphicComponent<C, ButtonProps> =>
   forwardRef(
@@ -32,6 +33,7 @@ export const createButton = <C extends ElementType = typeof defaultElement>({
         className,
         children,
         element,
+        style,
         ...rest
       }: PolymorphicComponentProps<E, ButtonProps>,
       ref: Ref<Element>
@@ -50,6 +52,7 @@ export const createButton = <C extends ElementType = typeof defaultElement>({
             className
           )}
           ref={ref}
+          style={{ ...configStyle, ...style }}
         >
           {busy ? (
             <>
