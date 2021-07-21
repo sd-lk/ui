@@ -1,6 +1,6 @@
 {
   "name": "@sdlk/react-entypo",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "main": "lib/index.js",
   "scripts": {
     "dev": "tsc -m esnext --watch",
