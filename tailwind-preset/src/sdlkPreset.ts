@@ -14,6 +14,7 @@ import { listPlugin } from './listPlugin'
 import { menuPlugin } from './menuPlugin'
 import { paperPlugin } from './paperPlugin'
 import { radioButtonPlugin } from './radioButtonPlugin'
+import { scrollBoxPlugin } from './scrollBoxPlugin'
 import { spinnerPlugin } from './spinnerPlugin'
 import { switchPlugin } from './switchPlugin'
 import { textAreaPlugin } from './textAreaPlugin'
@@ -74,6 +75,7 @@ export const sdlkPreset = {
     menuPlugin,
     paperPlugin,
     radioButtonPlugin,
+    scrollBoxPlugin,
     spinnerPlugin,
     switchPlugin,
     textAreaPlugin,
