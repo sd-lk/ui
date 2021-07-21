@@ -12,7 +12,7 @@ export const buttonPlugin = plugin(function ({ addBase, addComponents }) {
   })
   addBase({
     '.ui-button': {
-      '@apply py-2 px-4 rounded ui-button-text leading-6 flex gap-2 items-center justify-center relative': {},
+      '@apply px-4 h-10 rounded ui-button-text leading-6 flex gap-2 items-center justify-center relative': {},
       transition: 'filter',
       '&:before': {
         '@apply absolute top-0 left-0 right-0 bottom-0 opacity-0 transition duration-150': {},

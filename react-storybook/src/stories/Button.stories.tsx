@@ -37,13 +37,13 @@ Secondary.args = {
 export const Large = Template.bind({})
 Large.args = {
   children: 'Large Button',
-  className: 'ui-paper-2 ui-ink px-8 py-4 text-xl',
+  className: 'ui-paper-2 ui-ink px-8 h-14 text-xl',
 }
 
 export const Small = Template.bind({})
 Small.args = {
   children: 'Small Button',
-  className: 'ui-paper-2 ui-ink text-xs',
+  className: 'ui-paper-2 ui-ink text-xs h-8',
 }
 
 export const Outlined = Template.bind({})

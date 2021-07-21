@@ -4,8 +4,9 @@
 import plugin from 'tailwindcss/plugin'
 
 // @ts-ignore
-export const inkPlugin = plugin(function ({ addBase }) {
-  addBase({
+export const inkPlugin = plugin(function ({ addUtilities }) {
+  // NOTE: Utility level in order to override border color on base level
+  addUtilities({
     '.ui-ink': {
       '@apply border-ink text-ink dark:border-ink-dark dark:text-ink-dark': {},
     },
