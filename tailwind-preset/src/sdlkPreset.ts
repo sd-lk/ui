@@ -48,8 +48,7 @@ export const sdlkPreset = {
             transform: 'rotate(0)',
           },
           '24%': {
-            animationTimingFunction:
-              'animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1)',
+            animationTimingFunction: 'cubic-bezier(0.215, 0.61, 0.355, 1)',
             transform: 'rotate(900deg)',
           },
           '100%': {
