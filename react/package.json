@@ -1,6 +1,6 @@
 {
   "name": "@sdlk/react",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "main": "lib/index.js",
   "scripts": {
     "dev": "tsc -m esnext --watch",
