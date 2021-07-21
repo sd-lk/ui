@@ -24,5 +24,5 @@ bootstrap:
 link:
 	npx lerna link
 
-publish:
+publish: typecheck lint test build
 	npx lerna publish --no-private
