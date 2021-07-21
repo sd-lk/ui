@@ -29,5 +29,6 @@
     "react",
     "tailwind-preset"
   ],
+  "type": "module",
   "gitHead": "ebf3e914a18f98edc6eb79b277997e0434fc38c9"
 }
