@@ -4,8 +4,8 @@
 import plugin from 'tailwindcss/plugin'
 
 // @ts-ignore
-export const inkPlugin = plugin(function ({ addUtilities }) {
-  addUtilities({
+export const inkPlugin = plugin(function ({ addBase }) {
+  addBase({
     '.ui-ink': {
       '@apply border-ink text-ink dark:border-ink-dark dark:text-ink-dark': {},
     },
