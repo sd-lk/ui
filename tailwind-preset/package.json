@@ -1,6 +1,6 @@
 {
   "name": "@sdlk/tailwind-preset",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "Tailwind preset",
   "scripts": {
     "dev": "tsc -b . --watch",
