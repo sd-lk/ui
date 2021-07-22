@@ -1,9 +1,20 @@
 # Build
-build:
-	npx lerna run build
+build-esm:
+	npx lerna run build:esm
 
-clean:
-	npx tsc -b . --clean; npx rimraf **/lib
+build-cjs:
+	npx lerna run build:cjs
+
+build: prebuild build-cjs build-esm
+
+clean-buildinfo:
+	npx tsc -b . --clean
+
+clean: clean-buildinfo
+	npx rimraf **/lib
+
+prebuild: clean-buildinfo
+	npx lerna run prebuild
 
 # Lerna
 dev:
@@ -25,4 +36,4 @@ link:
 	npx lerna link
 
 publish: typecheck lint build
-	npx lerna publish --no-private
+	npx lerna publish --no-private --contents lib

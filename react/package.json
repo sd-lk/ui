@@ -2,10 +2,13 @@
   "name": "@sdlk/react",
   "version": "0.0.14",
   "main": "lib/index.js",
+  "module": "esm/index.js",
   "scripts": {
+    "build:cjs": "tsc -p .",
+    "build:esm": "tsc -m esnext --outDir lib/esm",
     "dev": "tsc -m esnext --watch",
-    "build": "tsc -m esnext",
     "lint": "eslint src --ext js,ts,tsx",
+    "prebuild": "rimraf lib; mkdir -p lib/esm; cp package.json lib/package.json; cp ../esm.json lib/esm/package.json",
     "test": "jest",
     "typecheck": "tsc --emitDeclarationOnly"
   },
@@ -29,6 +32,5 @@
     "react",
     "tailwind-preset"
   ],
-  "type": "module",
   "gitHead": "ebf3e914a18f98edc6eb79b277997e0434fc38c9"
 }
