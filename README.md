@@ -24,7 +24,7 @@ Tailwind based UI library
 + Radio
 + Input
 + TextArea
-- Backdrop
+- Backdrop!
 - NativeSelect
 - InputGroup
 - Select
