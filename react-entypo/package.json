@@ -22,7 +22,6 @@
     "typescript": "^4.3.4"
   },
   "peerDependencies": {
-    "@sdlk/tailwind-preset": "0.0.8",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
