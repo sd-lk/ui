@@ -1,10 +1,5 @@
 {
-  "packages": [
-    "tailwind-preset",
-    "react",
-    "react-entypo",
-    "react-storybook"
-  ],
+  "packages": ["tailwind-preset", "react", "react-entypo", "react-storybook"],
   "version": "0.0.15",
   "npmClient": "yarn",
   "useWorkspaces": true
