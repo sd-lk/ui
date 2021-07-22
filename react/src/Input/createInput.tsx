@@ -1,8 +1,6 @@
 import {
   forwardRef,
-  FocusEvent,
-  KeyboardEvent,
-  useCallback,
+  useEffect,
   useRef,
   ReactElement,
   ReactNode,
@@ -52,8 +50,6 @@ export const createInput: InputFactory = ({
         disabled,
         error = '•',
         fancy,
-        onBlur,
-        onKeyDown,
         placeholder,
         style,
         type = 'text',
@@ -62,27 +58,34 @@ export const createInput: InputFactory = ({
       } = { ...config, ...props }
       const defaultRef = useRef<HTMLInputElement>(null)
       const ref = externalRef || defaultRef
-      const [, setState] = useState(0)
+      const [state, setState] = useState<string>()
 
-      const handleBlur = useCallback(
-        (event: FocusEvent<HTMLInputElement>) => {
-          if (onBlur) onBlur(event)
-          setState((state) => state + 1)
-        },
-        [onBlur]
-      )
+      const node = getRefCurrent<HTMLInputElement>(ref)
 
-      const handleKeyDown = useCallback(
-        (event: KeyboardEvent<HTMLInputElement>) => {
-          if (children && event.code === 'Escape') event.currentTarget.blur()
-          if (onKeyDown) onKeyDown(event)
-        },
-        [onKeyDown, children]
-      )
+      useEffect(() => {
+        const node = getRefCurrent(ref)
+        function handleBlur() {
+          setState(node?.value)
+        }
+        function handleKeydown(event: KeyboardEvent) {
+          if (children && node && event.code === 'Escape') node.blur()
+        }
+        if (node) {
+          if (state !== node.value) setState(node.value)
+          node.addEventListener('blur', handleBlur)
+          node.addEventListener('keydown', handleKeydown)
+        }
+        return () => {
+          if (node) {
+            node.removeEventListener('blur', handleBlur)
+            node.removeEventListener('keydown', handleKeydown)
+          }
+        }
+      }, [children, ref, state])
 
       const isFilled =
         typeof (value || defaultValue || placeholder) !== 'undefined' ||
-        !!getRefCurrent<HTMLInputElement>(ref)?.value
+        !!node?.value
 
       return (
         <label
@@ -105,8 +108,6 @@ export const createInput: InputFactory = ({
               {...rest}
               defaultValue={defaultValue}
               disabled={disabled}
-              onBlur={handleBlur}
-              onKeyDown={handleKeyDown}
               placeholder={placeholder}
               ref={ref}
               type={type}

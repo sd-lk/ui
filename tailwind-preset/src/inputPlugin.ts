@@ -59,7 +59,7 @@ export const inputPlugin = plugin(function ({ addBase }) {
             opacity: 0.4,
           },
         },
-        '& ui-input__label--error-bullet': {
+        '& .ui-input__label--error-bullet': {
           '@apply hidden ml-1': {},
         },
         '& .ui-input__label': {
