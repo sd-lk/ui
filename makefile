@@ -1,20 +1,12 @@
 # Build
-build-esm:
-	npx lerna run build:esm
-
-build-cjs:
-	npx lerna run build:cjs
-
-build: prebuild build-cjs build-esm
+build: clean-buildinfo
+	npx lerna run build
 
 clean-buildinfo:
 	npx tsc -b . --clean
 
 clean: clean-buildinfo
 	npx rimraf **/lib
-
-prebuild: clean-buildinfo
-	npx lerna run prebuild
 
 # Lerna
 dev:

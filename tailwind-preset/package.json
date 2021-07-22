@@ -3,15 +3,13 @@
   "version": "0.0.14",
   "description": "Tailwind preset",
   "scripts": {
-    "build:cjs": "tsc -p .",
-    "build:esm": "tsc -m esnext --outDir lib/esm",
+    "build": "tsc -p .",
     "dev": "tsc -b . --watch",
-    "prebuild": "rimraf lib; mkdir -p lib/esm; cp package.json lib/package.json; cp ../esm.json lib/esm/package.json",
+    "prebuild": "rimraf lib; mkdir -p lib; cp package.json lib/package.json;",
     "lint": "eslint src --ext js,ts,tsx",
     "typecheck": "tsc --emitDeclarationOnly"
   },
   "main": "lib/index.js",
-  "module": "esm/index.js",
   "license": "MIT",
   "private": false,
   "devDependencies": {

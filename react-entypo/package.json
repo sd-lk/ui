@@ -4,6 +4,7 @@
   "main": "lib/index.js",
   "module": "esm/index.js",
   "scripts": {
+    "build": "yarn build:cjs && yarn build:esm",
     "build:cjs": "tsc -p .",
     "build:esm": "tsc -m esnext --outDir lib/esm",
     "dev": "tsc -m esnext --watch",
