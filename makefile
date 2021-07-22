@@ -1,9 +1,12 @@
 # Build
-build:
+build: clean-buildinfo
 	npx lerna run build
 
-clean:
-	npx tsc -b . --clean; npx rimraf **/lib
+clean-buildinfo:
+	npx tsc -b . --clean
+
+clean: clean-buildinfo
+	npx rimraf **/lib
 
 # Lerna
 dev:
@@ -25,4 +28,4 @@ link:
 	npx lerna link
 
 publish: typecheck lint build
-	npx lerna publish --no-private
+	npx lerna publish --no-private --contents lib

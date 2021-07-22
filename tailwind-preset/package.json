@@ -3,8 +3,9 @@
   "version": "0.0.14",
   "description": "Tailwind preset",
   "scripts": {
+    "build": "tsc -p .",
     "dev": "tsc -b . --watch",
-    "build": "tsc -b .",
+    "prebuild": "rimraf lib; mkdir -p lib; cp package.json lib/package.json;",
     "lint": "eslint src --ext js,ts,tsx",
     "typecheck": "tsc --emitDeclarationOnly"
   },
