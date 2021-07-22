@@ -86,6 +86,6 @@ export const inputPlugin = plugin(function ({ addBase }) {
         },
       },
     },
-    { variants: ['dark'] }
+    { variants: ['dark', 'focus-within'] }
   )
 })
