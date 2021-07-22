@@ -35,6 +35,6 @@ export const paperPlugin = plugin(({ addUtilities }) => {
         '@apply bg-paper-info dark:bg-paper-info-dark': {},
       },
     },
-    { variants: ['checked'] }
+    { variants: ['checked', 'focus-within'] }
   )
 })
