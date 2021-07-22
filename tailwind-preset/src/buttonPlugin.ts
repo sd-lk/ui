@@ -4,15 +4,13 @@
 import plugin from 'tailwindcss/plugin'
 
 // @ts-ignore
-export const buttonPlugin = plugin(function ({ addBase, addComponents }) {
-  addComponents({
+export const buttonPlugin = plugin(function ({ addBase }) {
+  addBase({
     '.ui-button-text': {
       '@apply text-sm font-medium leading-6': {},
     },
-  })
-  addBase({
     '.ui-button': {
-      '@apply px-4 h-10 rounded ui-button-text leading-6 flex gap-2 items-center justify-center relative': {},
+      '@apply px-4 rounded ui-button-text flex gap-2 items-center justify-center relative h-10': {},
       transition: 'filter',
       '&:before': {
         '@apply absolute top-0 left-0 right-0 bottom-0 opacity-0 transition duration-150': {},
