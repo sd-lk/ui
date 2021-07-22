@@ -7,7 +7,7 @@ import plugin from 'tailwindcss/plugin'
 export const menuPlugin = plugin(function ({ addBase }) {
   addBase({
     '.ui-menu': {
-      '@apply ui-list': {},
+      '@apply ui-list rounded': {},
     },
     '.ui-menu-header': {
       '@apply ui-list-header': {},
