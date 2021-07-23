@@ -22,7 +22,8 @@ export const listPlugin = plugin(function ({ addBase }) {
       '@apply px-4 flex-1': {},
     },
     '.ui-list-icon': {
-      '@apply block mx-5': {},
+      marginLeft: 'calc(1rem + 2px)',
+      marginRight: 'calc(1rem + 2px)',
     },
   })
 })

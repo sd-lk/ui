@@ -3,6 +3,8 @@
 // @ts-ignore
 import plugin from 'tailwindcss/plugin'
 
+// NOTE: In case we want visible and fancy scrollbars https://www.filamentgroup.com/lab/scrollbars/
+
 // @ts-ignore
 export const scrollBoxPlugin = plugin(function ({ addUtilities }) {
   addUtilities({
