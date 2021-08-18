@@ -12,6 +12,14 @@ const InputTemplate: ComponentStory<typeof TextArea> = (props) => (
 export const Default = InputTemplate.bind({})
 Default.args = { caption: 'Caption', rows: 4, required: true }
 
+export const CustomBg = InputTemplate.bind({})
+CustomBg.args = {
+  caption: 'Caption',
+  rows: 4,
+  // required: true,
+  className: 'ui-paper-info',
+}
+
 export const Autoheight = InputTemplate.bind({})
 Autoheight.args = { caption: 'Caption', rows: 1, autoHeight: true }
 

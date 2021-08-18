@@ -20,7 +20,7 @@ export type TextAreaProps = {
   caption?: ReactNode
   error?: ReactNode
   fancy?: boolean
-  labelClassName?: string
+  captionClassName?: string
   wrapperClassName?: string
 }
 
@@ -34,7 +34,7 @@ type TextAreaFactory = (
 
 export const createTextArea: TextAreaFactory = ({
   className: configClassName,
-  labelClassName: configLabelClassName,
+  captionClassName: configCaptionClassName,
   style: configStyle,
   wrapperClassName: configWrapperClassName,
   ...config
@@ -48,7 +48,7 @@ export const createTextArea: TextAreaFactory = ({
         defaultValue,
         error = '•',
         fancy,
-        labelClassName,
+        captionClassName,
         placeholder,
         style,
         value,
@@ -98,7 +98,7 @@ export const createTextArea: TextAreaFactory = ({
         >
           <textarea
             {...rest}
-            className={clsx(configClassName, className)}
+            className={clsx('ui-textarea__input', configClassName, className)}
             defaultValue={defaultValue}
             placeholder={placeholder}
             ref={ref}
@@ -108,13 +108,15 @@ export const createTextArea: TextAreaFactory = ({
           {caption && (
             <span
               className={clsx(
-                'ui-textarea__label',
-                configLabelClassName,
-                labelClassName
+                'ui-textarea__caption',
+                configCaptionClassName,
+                captionClassName
               )}
             >
               {caption}
-              <span className="ui-textarea__label--error-bullet">{error}</span>
+              <span className="ui-textarea__caption--error-bullet">
+                {error}
+              </span>
             </span>
           )}
         </label>

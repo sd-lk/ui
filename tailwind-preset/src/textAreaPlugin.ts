@@ -8,17 +8,6 @@ export const textAreaPlugin = plugin(function ({ addBase }) {
   addBase({
     '.ui-textarea': {
       '@apply relative flex flex-col-reverse text-ink dark:text-ink-dark': {},
-      '& textarea': {
-        '@apply block box-border appearance-none outline-none rounded bg-paper-2 dark:bg-paper-2-dark w-full px-4 py-2': {},
-        '-webkit-tap-highlight-color': 'transparent',
-        '&:invalid ~ .ui-textarea__label .ui-textarea__label--error-bullet': {
-          '@apply inline ui-ink-error': {},
-        },
-        '&::placeholder': {
-          color: 'inherit',
-          opacity: 0.4,
-        },
-      },
       '&.ui-textarea--fancy': {
         '&::before, &::after': {
           '@apply absolute pointer-events-none block bottom-0 left-0 right-0': {},
@@ -41,21 +30,32 @@ export const textAreaPlugin = plugin(function ({ addBase }) {
           '@apply rounded-b-none px-0 resize-none': {},
           backgroundColor: 'transparent',
         },
-        '& .ui-textarea__label': {
+        '& .ui-textarea__caption': {
           '@apply px-0': {},
         },
       },
-      '& .ui-textarea__label--error-bullet': {
-        '@apply hidden ml-1': {},
+      '& .ui-textarea__caption--error-bullet': {
+        '@apply hidden ml-1 ui-ink-error': {},
       },
       '&.ui-textarea--filled, &:focus-within': {
-        '& .ui-textarea__label': {
+        '& .ui-textarea__caption': {
           'font-size': '0.64rem',
           transform: 'translateY(0%)',
         },
       },
     },
-    '.ui-textarea__label': {
+    '.ui-textarea__input': {
+      '@apply block box-border appearance-none outline-none rounded bg-paper-2 dark:bg-paper-2-dark w-full px-4 py-2': {},
+      '-webkit-tap-highlight-color': 'transparent',
+      '&:invalid ~ .ui-textarea__caption .ui-textarea__caption--error-bullet': {
+        '@apply inline': {},
+      },
+      '&::placeholder': {
+        color: 'inherit',
+        opacity: 0.4,
+      },
+    },
+    '.ui-textarea__caption': {
       '@apply block truncate py-0 select-none leading-6 px-4': {},
       transition: 'font 0.32s ease, transform 0.32s ease',
       transform: 'translateY(2rem)',
