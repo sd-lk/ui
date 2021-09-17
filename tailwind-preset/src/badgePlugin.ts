@@ -2,12 +2,19 @@
 
 // @ts-ignore
 import plugin from 'tailwindcss/plugin'
+import { applyPrefixed } from './applyPrefixed'
 
 // @ts-ignore
-export const badgePlugin = plugin(function ({ addBase }) {
+export const badgePlugin = plugin(function ({ addBase, prefix }) {
   addBase({
     '.ui-badge': {
-      '@apply px-2 rounded-full inline-block ui-button-text': {},
+      ...applyPrefixed(
+        prefix,
+        '.px-2',
+        '.rounded-full',
+        '.inline-block',
+        '.ui-button-text'
+      ),
     },
   })
 })
