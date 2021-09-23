@@ -5,7 +5,7 @@ import plugin from 'tailwindcss/plugin'
 import { applyPrefixed } from './applyPrefixed'
 
 // @ts-ignore
-export const badgePlugin = plugin(function ({ addBase, prefix }) {
+export const badgePlugin = plugin(({ addBase, prefix }) => {
   addBase({
     '.ui-badge': {
       ...applyPrefixed(

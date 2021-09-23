@@ -8,10 +8,11 @@ import { applyPrefixed } from './applyPrefixed'
 export const buttonPlugin = plugin(function ({ addBase, prefix }) {
   addBase({
     '.ui-button-text': {
-      ...applyPrefixed( prefix, '.text-sm', '.font-medium', '.leading-6'),
+      ...applyPrefixed(prefix, '.text-sm', '.font-medium', '.leading-6'),
     },
     '.ui-button': {
-      ...applyPrefixed( prefix,
+      ...applyPrefixed(
+        prefix,
         '.px-4',
         '.rounded',
         '.ui-button-text',
@@ -20,10 +21,12 @@ export const buttonPlugin = plugin(function ({ addBase, prefix }) {
         '.items-center',
         '.justify-center',
         '.relative',
-        '.h-10'),
+        '.h-10'
+      ),
       transition: 'filter',
       '&:before': {
-        ...applyPrefixed( prefix,
+        ...applyPrefixed(
+          prefix,
           '.absolute',
           '.top-0',
           '.left-0',
@@ -31,7 +34,8 @@ export const buttonPlugin = plugin(function ({ addBase, prefix }) {
           '.bottom-0',
           '.opacity-0',
           '.transition',
-          '.duration-150'),
+          '.duration-150'
+        ),
         content: '""',
         backgroundColor: 'currentColor',
         borderRadius: 'inherit',
@@ -43,7 +47,7 @@ export const buttonPlugin = plugin(function ({ addBase, prefix }) {
         opacity: 0.16,
       },
       '&:disabled': {
-        ...applyPrefixed( prefix, '.ui-disabled'),
+        ...applyPrefixed(prefix, '.ui-disabled'),
       },
     },
     '.ui-button--busy': {
@@ -55,7 +59,16 @@ export const buttonPlugin = plugin(function ({ addBase, prefix }) {
         flexDirection: 'inherit',
       },
       '& > :last-child': {
-        ...applyPrefixed( prefix, '.visible', '.absolute', '.left-1/2', '.top-1/2', '.transform', '.-translate-x-1/2', '.-translate-y-1/2'),
+        ...applyPrefixed(
+          prefix,
+          '.visible',
+          '.absolute',
+          '.left-1/2',
+          '.top-1/2',
+          '.transform',
+          '.-translate-x-1/2',
+          '.-translate-y-1/2'
+        ),
       },
     },
   })
