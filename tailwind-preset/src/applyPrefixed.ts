@@ -2,9 +2,7 @@ interface Prefixer {
   (input: string): string
 }
 const screen = (item: string): string =>
-  item
-    // §.replace(/(\.[^\.]+)/, '$1\\')
-    .replace(/\//, '\\/')
+  item.replace(/(\d)\.(\d)/, '$1\\.$2').replace(/\//, '\\/')
 
 const unscreen = (item: string): string => item.replace('\\', '')
 
