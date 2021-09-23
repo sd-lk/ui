@@ -6,7 +6,6 @@ import { applyPrefixed } from './applyPrefixed'
 
 // @ts-ignore
 export const addonPlugin = plugin(function ({ addBase, prefix }) {
-  console.log('prefix: ', prefix)
   addBase({
     '.ui-addon': {
       ...applyPrefixed(
