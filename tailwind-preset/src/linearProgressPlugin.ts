@@ -2,12 +2,20 @@
 
 // @ts-ignore
 import plugin from 'tailwindcss/plugin'
+import { applyPrefixed } from './applyPrefixed'
 
 // @ts-ignore
-export const linearProgressPlugin = plugin(function ({ addBase }) {
+export const linearProgressPlugin = plugin(function ({ addBase, prefix }) {
   addBase({
     '.ui-linear-progress': {
-      '@apply animate-ui-linear-progress block h-1 relative rounded': {},
+      ...applyPrefixed(
+        prefix,
+        '.animate-ui-linear-progress',
+        '.block',
+        '.h-1',
+        '.relative',
+        '.rounded'
+      ),
       backgroundSize: '200% 100%',
       backgroundImage: `linear-gradient(
           to right,
@@ -22,7 +30,15 @@ export const linearProgressPlugin = plugin(function ({ addBase }) {
         )`,
     },
     '.ui-linear-progress::before': {
-      '@apply absolute top-0 left-0 right-0 bottom-0 opacity-20': {},
+      ...applyPrefixed(
+        prefix,
+        '.absolute',
+        '.top-0',
+        '.left-0',
+        '.right-0',
+        '.bottom-0',
+        '.opacity-20'
+      ),
       backgroundColor: 'currentColor',
       borderRadius: 'inherit',
       content: '""',
