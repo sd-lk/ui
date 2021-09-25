@@ -2,16 +2,34 @@
 
 // @ts-ignore
 import plugin from 'tailwindcss/plugin'
+import { applyPrefixed } from './applyPrefixed'
 
 // @ts-ignore
-export const switchPlugin = plugin(function ({ addBase }) {
+export const switchPlugin = plugin(function ({ addBase, prefix }) {
   addBase({
     '.ui-switch': {
-      '@apply appearance-none relative transition duration-300 rounded-full cursor-pointer ui-paper-3': {},
+      ...applyPrefixed(
+        prefix,
+        '.appearance-none',
+        '.relative',
+        '.transition',
+        '.duration-300',
+        '.rounded-full',
+        '.cursor-pointer',
+        '.ui-paper-3'
+      ),
       height: '1.5rem',
       width: '2.25rem',
       '&::before': {
-        '@apply bg-paper shadow absolute block transition-transform duration-300': {},
+        ...applyPrefixed(
+          prefix,
+          '.bg-paper',
+          '.shadow',
+          '.absolute',
+          '.block',
+          '.transition-transform',
+          '.duration-300'
+        ),
         content: '""',
         height: 'calc(1.5rem - 2px)',
         width: 'calc(1.5rem - 2px)',
@@ -31,7 +49,15 @@ export const switchPlugin = plugin(function ({ addBase }) {
       height: '1rem',
       width: '1.75rem',
       '&::before': {
-        '@apply ui-paper shadow absolute block transition-transform duration-300': {},
+        ...applyPrefixed(
+          prefix,
+          '.ui-paper',
+          '.shadow',
+          '.absolute',
+          '.block',
+          '.transition-transform',
+          '.duration-300'
+        ),
         content: '""',
         height: 'calc(1rem - 2px)',
         width: 'calc(1rem - 2px)',
@@ -51,7 +77,15 @@ export const switchPlugin = plugin(function ({ addBase }) {
       height: '2rem',
       width: '3rem',
       '&::before': {
-        '@apply ui-paper shadow absolute block transition-transform duration-300': {},
+        ...applyPrefixed(
+          prefix,
+          '.ui-paper',
+          '.shadow',
+          '.absolute',
+          '.block',
+          '.transition-transform',
+          '.duration-300'
+        ),
         content: '""',
         height: 'calc(2rem - 2px)',
         width: 'calc(2rem - 2px)',
