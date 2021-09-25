@@ -2,24 +2,32 @@
 
 // @ts-ignore
 import plugin from 'tailwindcss/plugin'
+import { applyPrefixed } from './applyPrefixed'
 
 // @ts-ignore
-export const listPlugin = plugin(function ({ addBase }) {
+export const listPlugin = plugin(function ({ addBase, prefix }) {
   addBase({
     '.ui-list': {
-      '@apply px-0 py-2 m-0': {},
+      ...applyPrefixed(prefix, '.px-0', '.py-2', '.m-0'),
     },
     '.ui-list-header': {
-      '@apply text-sm opacity-60 px-4 py-2 mb-2 block': {},
+      ...applyPrefixed(
+        prefix,
+        '.text-sm',
+        '.opacity-60',
+        '.px-4',
+        '.py-2',
+        '.mb-2',
+        '.block'),
     },
     '.ui-list-item': {
-      '@apply px-4 py-2 m-0 block': {},
+      ...applyPrefixed(prefix, '.px-4', '.py-2', '.m-0', '.block'),
     },
     '.ui-list-group': {
-      '@apply flex items-center py-2 m-0': {},
+      ...applyPrefixed(prefix, '.flex', '.items-center', '.py-2', '.m-0'),
     },
     '.ui-list-text': {
-      '@apply px-4 flex-1': {},
+      ...applyPrefixed(prefix, '.px-4', '.flex-1'),
     },
     '.ui-list-icon': {
       marginLeft: 'calc(1rem + 2px)',
