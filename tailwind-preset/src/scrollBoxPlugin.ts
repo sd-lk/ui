@@ -2,11 +2,12 @@
 
 // @ts-ignore
 import plugin from 'tailwindcss/plugin'
+import { applyPrefixed } from './applyPrefixed'
 
 // NOTE: In case we want visible and fancy scrollbars https://www.filamentgroup.com/lab/scrollbars/
 
 // @ts-ignore
-export const scrollBoxPlugin = plugin(function ({ addUtilities }) {
+export const scrollBoxPlugin = plugin(function ({ addUtilities, prefix }) {
   addUtilities({
     '.ui-scroll-box': {
       overflow: 'hidden',
@@ -19,7 +20,7 @@ export const scrollBoxPlugin = plugin(function ({ addUtilities }) {
       },
     },
     '.ui-scroll-box-x': {
-      '@apply ui-scroll-box': {},
+      ...applyPrefixed(prefix, '.ui-scroll-box'),
       display: 'flex',
       justifyContent: 'flex-start',
       'overflow-x': 'scroll',
@@ -28,7 +29,7 @@ export const scrollBoxPlugin = plugin(function ({ addUtilities }) {
       },
     },
     '.ui-scroll-box-y': {
-      '@apply ui-scroll-box': {},
+      ...applyPrefixed(prefix, '.ui-scroll-box'),
       'overflow-y': 'scroll',
       '&::-webkit-scrollbar': {
         display: 'none',
