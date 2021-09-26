@@ -2,12 +2,19 @@
 
 // @ts-ignore
 import plugin from 'tailwindcss/plugin'
+import { applyPrefixed } from './applyPrefixed'
 
 // @ts-ignore
-export const addonPlugin = plugin(function ({ addBase }) {
+export const addonPlugin = plugin(function ({ addBase, prefix }) {
   addBase({
     '.ui-addon': {
-      '@apply mx-4 flex items-center justify-center': {},
+      ...applyPrefixed(
+        prefix,
+        '.mx-4',
+        '.flex',
+        '.items-center',
+        '.justify-center'
+      ),
       minHeight: '1.5rem',
       minWidth: '1.5rem',
     },

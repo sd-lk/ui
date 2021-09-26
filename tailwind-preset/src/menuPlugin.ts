@@ -2,20 +2,38 @@
 
 // @ts-ignore
 import plugin from 'tailwindcss/plugin'
+import { applyPrefixed } from './applyPrefixed'
 
 // @ts-ignore
-export const menuPlugin = plugin(function ({ addBase }) {
+export const menuPlugin = plugin(function ({ addBase, prefix }) {
   addBase({
     '.ui-menu': {
-      '@apply ui-list rounded': {},
+      ...applyPrefixed(prefix, '.ui-list', '.rounded'),
     },
     '.ui-menu-header': {
-      '@apply ui-list-header': {},
+      ...applyPrefixed(prefix, '.ui-list-header'),
     },
     '.ui-menu-item': {
-      '@apply ui-list-item w-full text-left relative cursor-pointer': {},
+      ...applyPrefixed(
+        prefix,
+        '.ui-list-item',
+        '.w-full',
+        '.text-left',
+        '.relative',
+        '.cursor-pointer'
+      ),
       '&:before': {
-        '@apply absolute top-0 left-0 right-0 bottom-0 opacity-0 transition duration-150': {},
+        ...applyPrefixed(
+          prefix,
+          '.absolute',
+          '.top-0',
+          '.left-0',
+          '.right-0',
+          '.bottom-0',
+          '.opacity-0',
+          '.transition',
+          '.duration-150'
+        ),
         content: '""',
         backgroundColor: 'currentColor',
         borderRadius: 'inherit',
@@ -27,13 +45,30 @@ export const menuPlugin = plugin(function ({ addBase }) {
         opacity: 0.8,
       },
       '&:disabled': {
-        '@apply ui-disabled': {},
+        ...applyPrefixed(prefix, '.ui-disabled'),
       },
     },
     '.ui-menu-group': {
-      '@apply ui-list-group w-full text-left relative cursor-pointer': {},
+      ...applyPrefixed(
+        prefix,
+        '.ui-list-group',
+        '.w-full',
+        '.text-left',
+        '.relative',
+        '.cursor-pointer'
+      ),
       '&:before': {
-        '@apply absolute top-0 left-0 right-0 bottom-0 opacity-0 transition duration-150': {},
+        ...applyPrefixed(
+          prefix,
+          '.absolute',
+          '.top-0',
+          '.left-0',
+          '.right-0',
+          '.bottom-0',
+          '.opacity-0',
+          '.transition',
+          '.duration-150'
+        ),
         content: '""',
         backgroundColor: 'currentColor',
         borderRadius: 'inherit',
@@ -45,14 +80,14 @@ export const menuPlugin = plugin(function ({ addBase }) {
         opacity: 0.16,
       },
       '&:disabled': {
-        '@apply ui-disabled': {},
+        ...applyPrefixed(prefix, '.ui-disabled'),
       },
     },
     '.ui-menu-text': {
-      '@apply ui-list-text': {},
+      ...applyPrefixed(prefix, '.ui-list-text'),
     },
     '.ui-menu-icon': {
-      '@apply ui-list-icon': {},
+      ...applyPrefixed(prefix, '.ui-list-icon'),
     },
   })
 })

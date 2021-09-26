@@ -2,12 +2,13 @@
 
 // @ts-ignore
 import plugin from 'tailwindcss/plugin'
+import { applyPrefixed } from './applyPrefixed'
 
 // @ts-ignore
-export const entypoPlugin = plugin(function ({ addBase }) {
+export const entypoPlugin = plugin(function ({ addBase,prefix }) {
   addBase({
     '.ui-entypo': {
-      '@apply fill-current h-5 w-5': {},
+      ...applyPrefixed(prefix, '.fill-current', '.h-5', '.w-5'),
     },
   })
 })

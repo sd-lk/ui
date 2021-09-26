@@ -2,12 +2,21 @@
 
 // @ts-ignore
 import plugin from 'tailwindcss/plugin'
+import { applyPrefixed } from './applyPrefixed'
 
 // @ts-ignore
-export const spinnerPlugin = plugin(({ addBase }) => {
+export const spinnerPlugin = plugin(({ addBase, prefix }) => {
   addBase({
     '.ui-spinner': {
-      '@apply animate-ui-spinner block border-2 w-6 h-6 rounded-full': {},
+      ...applyPrefixed(
+        prefix,
+        '.animate-ui-spinner',
+        '.block',
+        '.border-2',
+        '.w-6',
+        '.h-6',
+        '.rounded-full'
+      ),
       borderColor: 'currentColor',
       borderLeftColor: 'transparent !important',
       borderRightColor: 'transparent !important',

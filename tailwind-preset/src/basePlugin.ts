@@ -2,12 +2,13 @@
 
 // @ts-ignore
 import plugin from 'tailwindcss/plugin'
+import { applyPrefixed } from './applyPrefixed'
 
 // @ts-ignore
-export const basePlugin = plugin(function ({ addBase }) {
+export const basePlugin = plugin(function ({ addBase, prefix }) {
   addBase({
     '.ui-disabled': {
-      '@apply pointer-events-none opacity-50': {},
+      ...applyPrefixed(prefix, '.pointer-events-none', '.opacity-50'),
     },
   })
 })
