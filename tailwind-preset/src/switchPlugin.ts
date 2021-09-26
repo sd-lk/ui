@@ -45,7 +45,7 @@ export const switchPlugin = plugin(function ({ addBase, prefix }) {
       },
     },
     '.ui-switch-small': {
-      '@apply ui-switch': {},
+      ...applyPrefixed(prefix, '.ui-switch'),
       height: '1rem',
       width: '1.75rem',
       '&::before': {
@@ -73,7 +73,7 @@ export const switchPlugin = plugin(function ({ addBase, prefix }) {
       },
     },
     '.ui-switch-big': {
-      '@apply ui-switch': {},
+      ...applyPrefixed(prefix, '.ui-switch'),
       height: '2rem',
       width: '3rem',
       '&::before': {
