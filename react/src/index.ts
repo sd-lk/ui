@@ -1,4 +1,5 @@
 export * from './Button'
+export * from './Cache'
 export * from './Input'
 export * from './LinearProgress'
 export * from './PolymorphicComponent'
