@@ -20,6 +20,7 @@ export const radioButtonPlugin = plugin(function ({ addBase, prefix }) {
       height: '1.5rem',
       width: '1.5rem',
       minWidth: '1.5rem',
+
       '&::before': {
         ...applyPrefixed(
           prefix,
@@ -39,6 +40,12 @@ export const radioButtonPlugin = plugin(function ({ addBase, prefix }) {
       },
       '&:checked::before': {
         ...applyPrefixed(prefix, '.scale-100'),
+      },
+      '&:invalid': {
+        ...applyPrefixed(prefix, '.ui-ink-error'),
+        '&::before': {
+          ...applyPrefixed(prefix, '.ui-paper-error'),
+        },
       },
     },
   })

@@ -5,7 +5,7 @@ export default {
 }
 
 const Checkbox: ComponentStory<'input'> = (props) => (
-  <input type="checkbox" {...props} />
+  <input type="checkbox" {...props} required />
 )
 
 export const Default = Checkbox.bind({})

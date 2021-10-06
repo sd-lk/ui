@@ -17,9 +17,9 @@ export const inputPlugin = plugin(function ({ addBase, prefix }) {
           '.relative',
           '.rounded',
           '.bg-paper-2',
-          '.dark:bg-paper-2-dark',
           '.h-12',
           '.text-ink',
+          '.dark:bg-paper-2-dark',
           '.dark:text-ink-dark'
         ),
         '& > .ui-input__wrapper': {
@@ -53,7 +53,8 @@ export const inputPlugin = plugin(function ({ addBase, prefix }) {
               '.block',
               '.bottom-0',
               '.left-0',
-              '.right-0'),
+              '.right-0'
+            ),
             content: '""',
             height: '1px',
             opacity: 0.32,
@@ -144,7 +145,12 @@ export const inputPlugin = plugin(function ({ addBase, prefix }) {
         },
         '&:focus-within, &:active': {
           '&  .ui-input__menu': {
-            ...applyPrefixed(prefix, '.visible', '.translate-y-0', '.opacity-100'),
+            ...applyPrefixed(
+              prefix,
+              '.visible',
+              '.translate-y-0',
+              '.opacity-100'
+            ),
           },
         },
       },
