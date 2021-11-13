@@ -14,6 +14,7 @@ export const colors = {
   ink: {
     DEFAULT: '#414141',
     dark: '#FCFCFC',
+    2: { DEFAULT: '#7B8B99', dark: '#5B6772' },
     primary: { DEFAULT: '#C7A713', dark: '#DCCA76' },
     secondary: { DEFAULT: '#4F4CEA', dark: '#8583FF' },
     error: { DEFAULT: '#D74030', dark: '#D45D50' },
