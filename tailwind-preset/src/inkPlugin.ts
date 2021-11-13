@@ -15,7 +15,16 @@ export const inkPlugin = plugin(function ({ addUtilities, prefix }) {
         '.text-ink',
         '.dark:border-ink-dark',
         '.dark:text-ink-dark'
-        ),
+      ),
+    },
+    '.ui-ink-2': {
+      ...applyPrefixed(
+        prefix,
+        '.border-ink-2',
+        '.text-ink-2',
+        '.dark:border-ink-2-dark',
+        '.dark:text-ink-2-dark'
+      ),
     },
     '.ui-ink-primary': {
       ...applyPrefixed(

@@ -9,6 +9,9 @@ const Template: ComponentStory<() => JSX.Element> = (args) => (
     <div className="ui-ink border-2 rounded-full w-12 h-12 flex items-center justify-center">
       T
     </div>
+    <div className="ui-ink-2 border-2 rounded-full w-12 h-12 flex items-center justify-center">
+      T
+    </div>
     <div className="ui-ink-primary border-2 rounded-full w-12 h-12 flex items-center justify-center">
       T
     </div>
