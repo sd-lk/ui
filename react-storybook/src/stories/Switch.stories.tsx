@@ -11,7 +11,7 @@ const Checkbox: ComponentStory<'input'> = (props) => (
 
 const Radio: ComponentStory<'form'> = ({ className, ...props }) => (
   <form
-    className={clsx('ui-menu ui-paper-2 ui-ink shadow max-w-sm', className)}
+    className={clsx('ui-menu ui-bg-paper-2 ui-ink shadow max-w-sm', className)}
     {...props}
   />
 )
@@ -20,14 +20,14 @@ export const Default = Checkbox.bind({})
 Default.args = { className: 'ui-switch' }
 
 export const Primary = Checkbox.bind({})
-Primary.args = { className: 'ui-switch checked:ui-paper-primary' }
+Primary.args = { className: 'ui-switch checked:ui-bg-paper-primary' }
 
 export const Small = Checkbox.bind({})
-Small.args = { className: 'ui-switch-small checked:ui-paper-success' }
+Small.args = { className: 'ui-switch-small checked:ui-bg-paper-success' }
 
 export const Big = Checkbox.bind({})
 Big.args = {
-  className: 'ui-paper-error ui-switch-big checked:ui-paper-info',
+  className: 'ui-bg-paper-error ui-switch-big checked:ui-bg-paper-info',
   defaultChecked: true,
 }
 
@@ -41,7 +41,7 @@ MutiallyExclusive.args = {
         <input
           type="radio"
           name="option"
-          className="ui-switch checked:ui-paper-success ui-menu-icon"
+          className="ui-switch checked:ui-bg-paper-success ui-menu-icon"
           value="1"
         />
       </label>
@@ -50,7 +50,7 @@ MutiallyExclusive.args = {
         <input
           type="radio"
           name="option"
-          className="ui-switch checked:ui-paper-success ui-menu-icon"
+          className="ui-switch checked:ui-bg-paper-success ui-menu-icon"
           value="2"
         />
       </label>
@@ -59,7 +59,7 @@ MutiallyExclusive.args = {
         <input
           type="radio"
           name="option"
-          className="ui-switch checked:ui-paper-success ui-menu-icon"
+          className="ui-switch checked:ui-bg-paper-success ui-menu-icon"
           value="3"
         />
       </label>
