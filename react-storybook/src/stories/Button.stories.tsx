@@ -1,6 +1,7 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react'
 
 import { Button } from '@sdlk/react'
+import { ShoppingBag } from '@sdlk/react-entypo'
 
 export default {
   title: 'React/Button',
@@ -16,7 +17,8 @@ export const Default = Template.bind({})
 Default.args = {
   children: (
     <>
-      <span>0</span>Button<span>1</span>
+      <ShoppingBag />
+      Button<span>1</span>
     </>
   ),
   className: 'ui-ink',

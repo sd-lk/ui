@@ -63,22 +63,23 @@ export const createInput: InputFactory = ({
       const node = getRefCurrent<HTMLInputElement>(ref)
 
       useEffect(() => {
-        const node = getRefCurrent(ref)
+        const currentNode = getRefCurrent<HTMLInputElement>(ref)
         function handleBlur() {
-          setState(node?.value)
+          setState(currentNode?.value)
         }
         function handleKeydown(event: KeyboardEvent) {
-          if (children && node && event.code === 'Escape') node.blur()
+          if (children && currentNode && event.code === 'Escape')
+            currentNode.blur()
         }
-        if (node) {
-          if (state !== node.value) setState(node.value)
-          node.addEventListener('blur', handleBlur)
-          node.addEventListener('keydown', handleKeydown)
+        if (currentNode) {
+          if (state !== currentNode.value) setState(currentNode.value)
+          currentNode.addEventListener('blur', handleBlur)
+          currentNode.addEventListener('keydown', handleKeydown)
         }
         return () => {
-          if (node) {
-            node.removeEventListener('blur', handleBlur)
-            node.removeEventListener('keydown', handleKeydown)
+          if (currentNode) {
+            currentNode.removeEventListener('blur', handleBlur)
+            currentNode.removeEventListener('keydown', handleKeydown)
           }
         }
       }, [children, ref, state])
