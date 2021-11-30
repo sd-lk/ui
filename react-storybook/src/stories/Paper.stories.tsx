@@ -9,22 +9,22 @@ const Template: ComponentStory<() => JSX.Element> = (args) => (
     <div className="ui-bg-paper rounded-full w-12 h-12 flex items-center justify-center">
       T
     </div>
-    <div className="ui-bg-paper-primary rounded-full w-12 h-12 flex items-center justify-center">
+    <div className="ui-bg-primary rounded-full w-12 h-12 flex items-center justify-center">
       T
     </div>
-    <div className="ui-bg-paper-secondary rounded-full w-12 h-12 flex items-center justify-center">
+    <div className="ui-bg-secondary rounded-full w-12 h-12 flex items-center justify-center">
       T
     </div>
-    <div className="ui-bg-paper-error rounded-full w-12 h-12 flex items-center justify-center">
+    <div className="ui-bg-error rounded-full w-12 h-12 flex items-center justify-center">
       T
     </div>
-    <div className="ui-bg-paper-success rounded-full w-12 h-12 flex items-center justify-center">
+    <div className="ui-bg-success rounded-full w-12 h-12 flex items-center justify-center">
       T
     </div>
-    <div className="ui-bg-paper-warning rounded-full w-12 h-12 flex items-center justify-center">
+    <div className="ui-bg-warning rounded-full w-12 h-12 flex items-center justify-center">
       T
     </div>
-    <div className="ui-bg-paper-info rounded-full w-12 h-12 flex items-center justify-center">
+    <div className="ui-bg-info rounded-full w-12 h-12 flex items-center justify-center">
       T
     </div>
   </div>

@@ -25,13 +25,13 @@ Default.args = {
 export const Primary = Template.bind({})
 Primary.args = {
   children: 'Primary button',
-  className: 'ui-bg-paper-primary text-ink',
+  className: 'ui-bg-primary text-ink',
 }
 
 export const Secondary = Template.bind({})
 Secondary.args = {
   children: 'Secondary button',
-  className: 'ui-bg-paper-secondary text-ink-dark',
+  className: 'ui-bg-secondary text-ink-dark',
 }
 
 export const Large = Template.bind({})
