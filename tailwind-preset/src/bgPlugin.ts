@@ -18,22 +18,22 @@ export const paperPlugin = plugin(({ addUtilities, prefix }) => {
         ...applyPrefixed(prefix, '.bg-paper-3', '.dark:bg-paper-3-dark'),
       },
       '.ui-bg-primary': {
-        ...applyPrefixed(prefix, '.bg-primary', '.dark:bg-primary-dark'),
+        ...applyPrefixed(prefix, '.bg-paper-primary', '.dark:bg-paper-primary-dark'),
       },
       '.ui-bg-secondary': {
-        ...applyPrefixed(prefix, '.bg-secondary', '.dark:bg-secondary-dark'),
+        ...applyPrefixed(prefix, '.bg-paper-secondary', '.dark:bg-paper-secondary-dark'),
       },
       '.ui-bg-error': {
-        ...applyPrefixed(prefix, '.bg-error', '.dark:bg-error-dark'),
+        ...applyPrefixed(prefix, '.bg-paper-error', '.dark:bg-paper-error-dark'),
       },
       '.ui-bg-success': {
-        ...applyPrefixed(prefix, '.bg-success', '.dark:bg-success-dark'),
+        ...applyPrefixed(prefix, '.bg-paper-success', '.dark:bg-paper-success-dark'),
       },
       '.ui-bg-warning': {
-        ...applyPrefixed(prefix, '.bg-warning', '.dark:bg-warning-dark'),
+        ...applyPrefixed(prefix, '.bg-paper-warning', '.dark:bg-paper-warning-dark'),
       },
       '.ui-bg-info': {
-        ...applyPrefixed(prefix, '.bg-info', '.dark:bg-info-dark'),
+        ...applyPrefixed(prefix, '.bg-paper-info', '.dark:bg-paper-info-dark'),
       },
       '.ui-bg-1': {
         ...applyPrefixed(prefix, '.bg-1', '.dark:bg-1-dark'),
