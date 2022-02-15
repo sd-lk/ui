@@ -17,7 +17,7 @@ CustomBg.args = {
   caption: 'Caption',
   rows: 4,
   // required: true,
-  className: 'ui-paper-info',
+  className: 'ui-bg-info',
 }
 
 export const Autoheight = InputTemplate.bind({})

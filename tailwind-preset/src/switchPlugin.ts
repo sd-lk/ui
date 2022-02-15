@@ -16,7 +16,7 @@ export const switchPlugin = plugin(function ({ addBase, prefix }) {
         '.duration-300',
         '.rounded-full',
         '.cursor-pointer',
-        '.ui-paper-3'
+        '.ui-bg-paper-3'
       ),
       height: '1.5rem',
       width: '2.25rem',
@@ -51,7 +51,7 @@ export const switchPlugin = plugin(function ({ addBase, prefix }) {
       '&::before': {
         ...applyPrefixed(
           prefix,
-          '.ui-paper',
+          '.ui-bg-paper',
           '.shadow',
           '.absolute',
           '.block',
@@ -79,7 +79,7 @@ export const switchPlugin = plugin(function ({ addBase, prefix }) {
       '&::before': {
         ...applyPrefixed(
           prefix,
-          '.ui-paper',
+          '.ui-bg-paper',
           '.shadow',
           '.absolute',
           '.block',

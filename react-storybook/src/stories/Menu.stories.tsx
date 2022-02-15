@@ -20,7 +20,7 @@ const Template: ComponentStory<'nav'> = (props) => (
 
 export const Simple = Template.bind({})
 Simple.args = {
-  className: 'w-80 ui-paper ui-ink shadow',
+  className: 'w-80 ui-bg-paper ui-ink shadow',
   children: (
     <>
       <header className="ui-menu-header py-2 mb-2">Mail</header>
@@ -43,7 +43,7 @@ Simple.args = {
 
 export const Advanced = Template.bind({})
 Advanced.args = {
-  className: 'w-80 ui-paper ui-ink shadow',
+  className: 'w-80 ui-bg-paper ui-ink shadow',
   children: (
     <>
       <header className="ui-menu-header py-2 mb-2">Mail</header>
