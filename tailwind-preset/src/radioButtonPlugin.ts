@@ -44,7 +44,7 @@ export const radioButtonPlugin = plugin(function ({ addBase, prefix }) {
       '&:invalid': {
         ...applyPrefixed(prefix, '.ui-ink-error'),
         '&::before': {
-          ...applyPrefixed(prefix, '.ui-paper-error'),
+          ...applyPrefixed(prefix, '.ui-bg-error'),
         },
       },
     },
